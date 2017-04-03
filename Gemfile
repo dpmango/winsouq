@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # my gems
 gem "slim-rails"
 gem 'react-rails'
+gem "autoprefixer-rails"
 
 
 group :development, :test do
