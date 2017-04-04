@@ -40,6 +40,7 @@ gem 'react-rails'
 gem "autoprefixer-rails"
 gem "rails-sass-images"
 gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
