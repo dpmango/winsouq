@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404190613) do
+ActiveRecord::Schema.define(version: 20170404213359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,26 @@ ActiveRecord::Schema.define(version: 20170404190613) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "image"
+    t.string   "description"
+    t.float    "price"
+    t.string   "name"
+    t.integer  "shop_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_products_on_category_id", using: :btree
+    t.index ["shop_id"], name: "index_products_on_shop_id", using: :btree
+  end
+
   create_table "shops", force: :cascade do |t|
     t.string   "title"
     t.string   "image"
@@ -78,7 +98,9 @@ ActiveRecord::Schema.define(version: 20170404190613) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "slug"
+    t.integer  "user_id"
     t.index ["slug"], name: "index_shops_on_slug", unique: true, using: :btree
+    t.index ["user_id"], name: "index_shops_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -114,4 +136,7 @@ ActiveRecord::Schema.define(version: 20170404190613) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
   end
 
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "shops"
+  add_foreign_key "shops", "users"
 end

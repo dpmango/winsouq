@@ -7,7 +7,7 @@
     display: flex
     flex-direction: column
     justify-content: center
-    min-height: calc(100vh-100px)
+    min-height: 65vh
     margin: 10vh 15%
 
   &__form
@@ -15,3 +15,46 @@
     max-width: 550px
     margin-left: auto
     margin-right: auto
+
+
+// PROFILE
+
+.profile
+  &__wrapper
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 65vh
+    margin: 10vh 5%
+  &__links
+    font-size: 25px
+    a
+      display: block
+      margin-bottom: 10px
+      color: $colorPrimary2
+      &::before
+        display: inline-block
+        content: ' '
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background: $colorPrimary2
+        margin-right: 10px
+        vertical-align: middle
+
+
+// Content
+.content
+  &__wrapper
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 65vh
+    margin: 10vh 5%
+  p
+    font-size: 16px
+    line-height: 1.6

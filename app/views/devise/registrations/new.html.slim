@@ -17,9 +17,13 @@
                 = f.text_field :username, autofocus: true, placeholder: 'display name'
               .ui-group
                 = f.password_field :password, autocomplete: "off", placeholder: 'password'
-              .text-right
+              .flex-row
+                .ui-checkbox
+                  input[type='checkbox' id='agreed']
+                  label[for='agredd'] Agree to terms
+                
                 = f.submit "Sign up", class: 'btn btn--primary'
-              
+            
               = devise_error_messages!
               
                 

@@ -1,0 +1,19 @@
+.profile
+  .container
+    .row.white-bg
+      .col.col--auto
+        .profile__wrapper
+          h2.heading.heading--border Welcome #{@user.email}
+          
+          .row
+            .col.col--3-6
+              .profile__links
+                = link_to "Edit profile", edit_user_registration_path(current_user.id)
+                = link_to "New shop", new_shop_path
+            .col.col--3-6
+              .profile__links
+                a href='#' View history (soon)
+                a href='#' View products liked (soon)
+                a href='#' View shops liked (soon)
+                a href='#' View notifications (soon)
+                

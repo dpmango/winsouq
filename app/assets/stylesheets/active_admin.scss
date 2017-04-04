@@ -7,11 +7,20 @@
 // For example, to change the sidebar width:
 // $sidebar-width: 242px;
 
+// $skinMainFirstColor: #A5A7AA!default;
+// $skinMainSecondColor: #0066CC!default;
+// $skinBorderWindowColor: #B8BABE!default;
+
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+@import "wigu/active_admin_theme";
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+#footer{
+  font-size: 0 !important;
+}

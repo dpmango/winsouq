@@ -12,16 +12,17 @@ footer.footer
       .col.col--1-4
         .footer__heading WINSHOP
         .footer__links
-          a href='#' About us
-          a href='#' Career
-          a href='#' Our works / References
-          a href='#' Contact us
+          = link_to "About us", about_path
+          = link_to "Contact us", contact_path
+          = link_to "FAQ", faq_path
+          = link_to "Terms & Conditions", terms_path
 
       .col.col--1-4
         .footer__heading Account
         .footer__links
           - if user_signed_in?
-            = link_to "My Account", edit_user_registration_path
+            = link_to "Account (Dashboard)", user_welcome_path(current_user.id)
+            = link_to "Edit Profile", edit_user_registration_path
             = link_to "Sign Out", destroy_user_session_path, :method => :delete
           - else
             = link_to "Sign Up", new_user_registration_path
