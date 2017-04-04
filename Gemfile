@@ -41,6 +41,7 @@ gem "autoprefixer-rails"
 gem "rails-sass-images"
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'seed_dump'
 
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'

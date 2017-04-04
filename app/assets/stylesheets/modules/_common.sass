@@ -112,3 +112,117 @@
   padding: 15px 0
   font-size: 15px
   text-align: center
+
+
+
+// GENERIC CLASSES
+.white-bg
+  background: white
+
+.heading
+  font-size: 42px
+  color: $colorPrimary2
+  &--red
+    color: #fe7c7c
+
+.flex-row
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: center
+
+// UI
+.ui-group
+  margin-bottom: 25px
+  position: relative
+  > label
+    font-size: 16px
+  input
+    position: relative
+    display: block
+    width: 100%
+    background: #ebebeb
+    border-radius: 0
+    box-shadow: none
+    border: none
+    border-left: 6px solid #57dcd4
+    padding: 20px
+    font-size: 25px
+    &:focus
+      outline: none
+  &::after
+    display: block
+    content: ' '
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 5px
+    background: #57dcd4
+    z-index: 2
+    transition: all .3s ease
+  &.focus
+    &::after
+      right: 0
+
+
+// CHECKBOX
+.ui-checkbox
+  padding-top: 10px
+  padding-bottom: 10px
+  input[type='checkbox']
+    display: none
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    &:checked
+      + label
+        &::before
+          background: #dadada inline('svg/checkbox-yes.svg') no-repeat center
+
+  label
+    position: relative
+    cursor: pointer
+    display: inline-block
+    padding-left: 40px
+    vertical-align: top
+    line-height: 1.3
+    font-size: 22px
+    color: #dadada
+    cursor: pointer
+    &::before
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      display: inline-block
+      content: ' '
+      width: 25px
+      height: 25px
+      border-radius: 0px
+      background: #ebebeb
+      cursor: pointer
+      vertical-align: middle
+      cursor: pointer
+      transition: all .3s ease-in-out
+
+
+
+
+// RAILS SPECIFIC CLASSES
+#error_explanation
+  border-bottom: 2px solid #5ab7ac
+  color: #999999
+  padding-bottom: 20px
+  margin-top: 20px
+  h2
+    font-size: 25px
+  ul
+    font-size: 20px
+    list-style: circle
+    li
+      display: block

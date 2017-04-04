@@ -4,7 +4,7 @@ header.header
       .col.col--auto
         .header__wrapper
           .header__logo
-            a href="#"
+            = link_to root_path
               i.ico.ico-logo
           .header__menu
             ul
@@ -12,8 +12,9 @@ header.header
                 = link_to "Home", root_path
               li.active
                 a href='#' Shop
-              li
-                a href="#" Account
+              - if user_signed_in?
+                li
+                  = link_to "Account", edit_user_registration_path
               li
                 a href='#' Contact US
               li

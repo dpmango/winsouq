@@ -1,0 +1,3044 @@
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 25, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 39, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 52, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 62, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 71, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 82, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 95, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 105, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 115, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 124, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 134, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 145, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 153, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 162, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 171, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 179, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 183, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 194, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 203, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 212, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 220, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+/* line 231, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 244, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 254, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 265, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 276, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 288, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 302, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 316, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 325, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 334, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 344, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 354, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 363, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 373, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 386, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 395, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 406, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 414, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 425, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 4, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 7, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+}
+
+/* line 10, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+ul {
+  list-style: none;
+}
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+ul li {
+  display: inline-block;
+}
+
+/* line 15, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+body, html {
+  background: #eeeeee;
+  color: #333;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* line 29, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 36, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+.page {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+/* line 41, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+.page__content {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/* line 43, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+.page.lock {
+  overflow-y: hidden;
+  max-height: 100vh;
+}
+
+/* line 47, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+::-webkit-scrollbar {
+  width: 18px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* line 52, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+::-webkit-scrollbar-track {
+  background: #d7d8d8;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* line 57, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_layout.sass */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #5cc6b6;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* line 2, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 6, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--wrap {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+/* line 8, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/* line 10, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--aic {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--jcsb {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 14, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--jcsa {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+/* line 16, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--jcc {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--jcfe {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/* line 20, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--jcfs {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+/* line 22, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--condenced {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 23, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.row--condenced .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 61.99em) {
+  /* line 29, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--wrap--desktop {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  /* line 31, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--column--desktop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 33, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--aic--desktop {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* line 35, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcsb--desktop {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  /* line 37, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcsa--desktop {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  /* line 39, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcc--desktop {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 41, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcfe--desktop {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  /* line 43, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcfs--desktop {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media (max-width: 47.99em) {
+  /* line 46, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--wrap--tablet {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  /* line 48, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--column--tablet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 50, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--aic--tablet {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* line 52, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcsb--tablet {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  /* line 54, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcsa--tablet {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  /* line 56, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcc--tablet {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 58, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcfe--tablet {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  /* line 60, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcfs--tablet {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media (max-width: 35.49em) {
+  /* line 63, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--wrap--mobile {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  /* line 65, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--column--mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 67, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--aic--mobile {
+    -webkit-box-align: mobile;
+    -webkit-align-items: mobile;
+        -ms-flex-align: mobile;
+            align-items: mobile;
+  }
+  /* line 69, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcsb--mobile {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  /* line 71, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcsa--mobile {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  /* line 73, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcc--mobile {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 75, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcfe--mobile {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  /* line 77, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .row--jcfs--mobile {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+/* line 82, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 0;
+}
+/* line 88, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--1-6 {
+  -webkit-flex-basis: 16.6%;
+      -ms-flex-preferred-size: 16.6%;
+          flex-basis: 16.6%;
+}
+/* line 90, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--2-6 {
+  -webkit-flex-basis: 33.3%;
+      -ms-flex-preferred-size: 33.3%;
+          flex-basis: 33.3%;
+}
+/* line 92, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--3-6 {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+}
+/* line 94, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--4-6 {
+  -webkit-flex-basis: 66.4%;
+      -ms-flex-preferred-size: 66.4%;
+          flex-basis: 66.4%;
+}
+/* line 96, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--5-6 {
+  -webkit-flex-basis: 83%;
+      -ms-flex-preferred-size: 83%;
+          flex-basis: 83%;
+}
+/* line 98, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--full {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+/* line 100, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--1-4 {
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+}
+/* line 102, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--3-4 {
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
+}
+/* line 104, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+/* line 106, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--grow {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/* line 108, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.col--no-shrink {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+@media (max-width: 61.99em) {
+  /* line 112, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--full--desktop {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  /* line 114, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--auto--desktop {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+  }
+  /* line 116, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--grow--desktop {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+@media (max-width: 47.99em) {
+  /* line 120, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--full--tablet {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  /* line 122, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--auto--tablet {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+  }
+  /* line 124, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--grow--tablet {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+@media (max-width: 35.49em) {
+  /* line 128, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--full--mobile {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  /* line 130, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--auto--tablet {
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+  }
+  /* line 132, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .col--grow--mobile {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+/* line 137, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.offset--1-6 {
+  margin-left: 16.6%;
+}
+
+/* line 140, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.no-pad {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 144, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.no-pad-l {
+  padding-left: 0;
+}
+@media (max-width: 35.49em) {
+  /* line 144, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .no-pad-l {
+    padding-left: 15px;
+  }
+}
+
+/* line 149, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.no-pad-r {
+  padding-right: 0;
+}
+@media (max-width: 35.49em) {
+  /* line 149, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .no-pad-r {
+    padding-right: 15px;
+  }
+}
+
+/* line 154, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.hidden--desktop {
+  display: block;
+}
+@media (max-width: 61.99em) {
+  /* line 154, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .hidden--desktop {
+    display: none;
+  }
+}
+
+/* line 159, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.visible--desktop {
+  display: none;
+}
+@media (max-width: 61.99em) {
+  /* line 159, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .visible--desktop {
+    display: block;
+  }
+}
+
+/* line 164, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+.visible--mobile {
+  display: none;
+}
+@media (max-width: 35.49em) {
+  /* line 164, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_flex-grid.sass */
+  .visible--mobile {
+    display: block;
+  }
+}
+
+/* line 4, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt5 {
+  margin-top: 5px;
+}
+
+/* line 6, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt10 {
+  margin-top: 10px;
+}
+
+/* line 8, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt20 {
+  margin-top: 20px;
+}
+
+/* line 10, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt30 {
+  margin-top: 30px;
+}
+
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt40 {
+  margin-top: 40px;
+}
+
+/* line 14, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt50 {
+  margin-top: 50px;
+}
+
+/* line 16, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt60 {
+  margin-top: 60px;
+}
+
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt70 {
+  margin-top: 70px;
+}
+
+/* line 20, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt80 {
+  margin-top: 80px;
+}
+
+/* line 22, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt90 {
+  margin-top: 90px;
+}
+
+/* line 24, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.mt100 {
+  margin-top: 100px;
+}
+
+/* line 28, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt5 {
+  padding-top: 5px;
+}
+
+/* line 30, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt10 {
+  padding-top: 10px;
+}
+
+/* line 32, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt15 {
+  padding-top: 15px;
+}
+
+/* line 34, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt20 {
+  padding-top: 20px;
+}
+
+/* line 36, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt30 {
+  padding-top: 30px;
+}
+
+/* line 38, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt40 {
+  padding-top: 40px;
+}
+
+/* line 40, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt50 {
+  padding-top: 50px;
+}
+
+/* line 42, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt60 {
+  padding-top: 60px;
+}
+
+/* line 44, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt70 {
+  padding-top: 70px;
+}
+
+/* line 46, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt80 {
+  padding-top: 80px;
+}
+
+/* line 48, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt90 {
+  padding-top: 90px;
+}
+
+/* line 50, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.pt100 {
+  padding-top: 100px;
+}
+
+/* line 55, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.text-center {
+  text-align: center;
+}
+
+/* line 58, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/layout/_helpers.sass */
+.text-right {
+  text-align: right;
+}
+
+/* line 2, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico {
+  display: inline-block;
+  font-style: normal;
+  content: " ";
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  background-position: center;
+}
+
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-logo {
+  background-image: url(/assets/logo-4b80827ed603de75800d8b2fcb847c65621d787ba5cf6b2a4876b2cece6682c2.png);
+  width: 236px;
+  height: 60px;
+}
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-footer-payment {
+  background-image: url(/assets/footer-payment-d5ff5b53ee9ce0db92c7c84437734f24f6f61bf6ad92373c89c05fb42deac4ba.png);
+  width: 121px;
+  height: 138px;
+}
+/* line 22, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-search {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%0A%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20width%3D%2247px%22%20height%3D%2249px%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20%20fill%3D%22rgb%2889%2C%2083%2C%2083%29%22%0A%20d%3D%22M33.699%2C17.613%20C33.699%2C8.307%2026.155%2C0.763%2016.849%2C0.763%20C7.545%2C0.763%200.002%2C8.307%200.002%2C17.613%20C0.002%2C26.918%207.545%2C34.460%2016.849%2C34.460%20C19.396%2C34.460%2021.800%2C33.877%2023.964%2C32.869%20L39.335%2C48.238%20L46.355%2C41.219%20L31.330%2C26.193%20C32.825%2C23.678%2033.699%2C20.752%2033.699%2C17.613%20ZM16.849%2C28.522%20C10.824%2C28.522%205.940%2C23.638%205.940%2C17.613%20C5.940%2C11.585%2010.824%2C6.701%2016.849%2C6.701%20C22.875%2C6.701%2027.761%2C11.585%2027.761%2C17.613%20C27.761%2C23.638%2022.875%2C28.522%2016.849%2C28.522%20Z%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  width: 40px;
+  height: 40px;
+}
+/* line 27, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-food {
+  background-image: url(/assets/ico-cat-food-e02a9aa57e3c5deb24075be5a2ad5d89fdd7e903423f75bd254058a5471e7121.png);
+  width: 183px;
+  height: 110px;
+}
+/* line 30, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-home {
+  background-image: url(/assets/ico-cat-home-d6ff036fe3c4f41778be8bdae179275ea60ad74708631be5bdabfb0b70e69ae6.png);
+  width: 192px;
+  height: 114px;
+}
+/* line 33, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-accesories {
+  background-image: url(/assets/ico-cat-accesories-95c381dccaae0ab6f04451a6fdaa1a2c8bf551362ed98cc17b1088c0736c388b.png);
+  width: 217px;
+  height: 102px;
+}
+/* line 36, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-clothes {
+  background-image: url(/assets/ico-cat-cloth-b387401a75f1683b0513732fc55ce84613208941666caace769ec671acd58fec.png);
+  width: 167px;
+  height: 121px;
+}
+/* line 39, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-wedding {
+  background-image: url(/assets/ico-cat-wedding-fea09ee392e20d5513488b42f65f69dedebbcf8d3f45ccee09fafeb2eda5e3be.png);
+  width: 107px;
+  height: 143px;
+}
+/* line 42, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-photo {
+  background-image: url(/assets/ico-cat-photo-54fb82feb7f649dc7cda9c1cc76d42fbc6fa7985140668e4d6e684e64f6bd94b.png);
+  width: 136px;
+  height: 118px;
+}
+/* line 45, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-child {
+  background-image: url(/assets/ico-cat-child-4b934b889d3119e11d089f1ce73c5c50b209b49aa08b861f5c4690a229db60a0.png);
+  width: 104px;
+  height: 131px;
+}
+/* line 48, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-health {
+  background-image: url(/assets/ico-cat-health-2a60b46dcdf26c2f69b9fddcc0c6b60c5b24f48aca059feb96b0c368bfdaba4e.png);
+  width: 90px;
+  height: 130px;
+}
+/* line 51, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_icons.sass */
+.ico-cat-cars {
+  background-image: url(/assets/ico-cat-cars-fe3d250c0f50acd3a5d9938096d8f0c05bff918050961ffd0ffc60fdd4e630d1.png);
+  width: 185px;
+  height: 109px;
+}
+
+/* line 2, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_buttons.sass */
+button {
+  outline: none;
+}
+
+/* line 5, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_buttons.sass */
+.btn {
+  display: inline-block;
+  -webkit-appearance: none;
+  text-align: center;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+/* line 13, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_buttons.sass */
+.btn:focus, .btn:active {
+  outline: none;
+}
+/* line 15, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_buttons.sass */
+.btn--primary {
+  background: #ebebeb;
+  border-bottom: 5px solid #57dcd4;
+  color: #999999;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 25px;
+}
+/* line 22, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_buttons.sass */
+.btn--block {
+  display: block;
+}
+
+/* line 1, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+/* line 15, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 24, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+/* line 36, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+/* line 45, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+/* line 48, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger-inner::before {
+  top: -10px;
+}
+/* line 50, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* line 57, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx .hamburger-box {
+  -webkit-perspective: 80px;
+          perspective: 80px;
+}
+/* line 59, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 61, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 63, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/* line 66, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+/* line 68, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* line 75, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx-r .hamburger-box {
+  -webkit-perspective: 80px;
+          perspective: 80px;
+}
+/* line 77, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx-r .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 79, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx-r .hamburger-inner::before, .hamburger--3dx-r .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 81, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx-r.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+/* line 84, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx-r.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+/* line 86, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dx-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* line 93, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy .hamburger-box {
+  -webkit-perspective: 80px;
+          perspective: 80px;
+}
+/* line 95, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 97, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 99, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+/* line 102, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+/* line 104, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* line 111, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy-r .hamburger-box {
+  -webkit-perspective: 80px;
+          perspective: 80px;
+}
+/* line 113, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy-r .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 115, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy-r .hamburger-inner::before, .hamburger--3dy-r .hamburger-inner::after {
+  -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* line 117, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy-r.is-active .hamburger-inner {
+  background-color: transparent;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+/* line 120, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy-r.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+/* line 122, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--3dy-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* line 129, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrow.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+          transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+/* line 131, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrow.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+          transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+/* line 138, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrow-r.is-active .hamburger-inner::before {
+  -webkit-transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+          transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+/* line 140, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrow-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+          transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+/* line 148, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 150, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: bottom 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: bottom 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: bottom 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 153, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+          transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+  -webkit-transition: top 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: top 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: top 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: top 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+/* line 157, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+          transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+  -webkit-transition: bottom 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: bottom 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+/* line 167, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt-r .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: top 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 169, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt-r .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: bottom 0.1s 0.15s ease, -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: bottom 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: bottom 0.1s 0.15s ease, transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 172, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt-r.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);
+          transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);
+  -webkit-transition: top 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: top 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: top 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: top 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+/* line 176, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--arrowalt-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
+          transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
+  -webkit-transition: bottom 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: bottom 0.1s ease, -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: bottom 0.1s ease, transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+/* line 185, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--boring .hamburger-inner {
+  -webkit-transition-property: none;
+  transition-property: none;
+}
+/* line 187, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {
+  -webkit-transition-property: none;
+  transition-property: none;
+}
+/* line 189, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--boring.is-active .hamburger-inner {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/* line 191, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--boring.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+}
+/* line 194, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--boring.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+/* line 202, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 208, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  -webkit-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+  transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+/* line 211, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse .hamburger-inner::before {
+  -webkit-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 213, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 217, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+}
+/* line 221, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 230, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse-r .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 236, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse-r .hamburger-inner::after {
+  top: -20px;
+  -webkit-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+  transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+/* line 239, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse-r .hamburger-inner::before {
+  -webkit-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 241, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse-r.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(45deg);
+          transform: translate3d(0, -10px, 0) rotate(45deg);
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 245, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse-r.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+}
+/* line 249, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--collapse-r.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 258, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic .hamburger-inner {
+  top: 2px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 262, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic .hamburger-inner::before {
+  top: 10px;
+  -webkit-transition: opacity 0.15s 0.4s ease;
+  transition: opacity 0.15s 0.4s ease;
+}
+/* line 265, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic .hamburger-inner::after {
+  top: 20px;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 268, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(135deg);
+          transform: translate3d(0, 10px, 0) rotate(135deg);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+/* line 271, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic.is-active .hamburger-inner::before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  opacity: 0;
+}
+/* line 274, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -20px, 0) rotate(-270deg);
+          transform: translate3d(0, -20px, 0) rotate(-270deg);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+/* line 282, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic-r .hamburger-inner {
+  top: 2px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 286, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic-r .hamburger-inner::before {
+  top: 10px;
+  -webkit-transition: opacity 0.15s 0.4s ease;
+  transition: opacity 0.15s 0.4s ease;
+}
+/* line 289, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic-r .hamburger-inner::after {
+  top: 20px;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 292, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic-r.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(-135deg);
+          transform: translate3d(0, 10px, 0) rotate(-135deg);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+/* line 295, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic-r.is-active .hamburger-inner::before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  opacity: 0;
+}
+/* line 298, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--elastic-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -20px, 0) rotate(270deg);
+          transform: translate3d(0, -20px, 0) rotate(270deg);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+/* line 305, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic {
+  overflow: hidden;
+}
+/* line 307, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic .hamburger-inner {
+  -webkit-transition: background-color 0.2s 0.25s ease-in;
+  transition: background-color 0.2s 0.25s ease-in;
+}
+/* line 309, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic .hamburger-inner::before {
+  left: 0;
+  -webkit-transition: top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, left 0.2s 0.25s ease-in;
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+/* line 312, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic .hamburger-inner::after {
+  top: 10px;
+  right: 0;
+  -webkit-transition: top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, right 0.2s 0.25s ease-in;
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+/* line 316, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic.is-active .hamburger-inner {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  background-color: transparent;
+}
+/* line 320, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic.is-active .hamburger-inner::before {
+  left: -80px;
+  top: -80px;
+  -webkit-transform: translate3d(80px, 80px, 0) rotate(45deg);
+          transform: translate3d(80px, 80px, 0) rotate(45deg);
+  -webkit-transition: left 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* line 325, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic.is-active .hamburger-inner::after {
+  right: -80px;
+  top: -80px;
+  -webkit-transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+          transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  -webkit-transition: right 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* line 334, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r {
+  overflow: hidden;
+}
+/* line 336, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r .hamburger-inner {
+  -webkit-transition: background-color 0.2s 0.25s ease-in;
+  transition: background-color 0.2s 0.25s ease-in;
+}
+/* line 338, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r .hamburger-inner::before {
+  left: 0;
+  -webkit-transition: top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, left 0.2s 0.25s ease-in;
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, left 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+/* line 341, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r .hamburger-inner::after {
+  top: 10px;
+  right: 0;
+  -webkit-transition: top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, right 0.2s 0.25s ease-in;
+  transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.2s linear, right 0.2s 0.25s ease-in, -webkit-transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+/* line 345, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r.is-active .hamburger-inner {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  background-color: transparent;
+}
+/* line 349, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r.is-active .hamburger-inner::before {
+  left: -80px;
+  top: 80px;
+  -webkit-transform: translate3d(80px, -80px, 0) rotate(-45deg);
+          transform: translate3d(80px, -80px, 0) rotate(-45deg);
+  -webkit-transition: left 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* line 354, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--emphatic-r.is-active .hamburger-inner::after {
+  right: -80px;
+  top: 80px;
+  -webkit-transform: translate3d(-80px, -80px, 0) rotate(45deg);
+          transform: translate3d(-80px, -80px, 0) rotate(45deg);
+  -webkit-transition: right 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.2s ease-out, top 0.05s 0.2s linear, -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.2s ease-out, top 0.05s 0.2s linear, transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* line 364, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider .hamburger-inner {
+  top: 2px;
+}
+/* line 366, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+/* line 371, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+/* line 373, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+/* line 375, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider.is-active .hamburger-inner::before {
+  -webkit-transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+          transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+/* line 378, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -20px, 0) rotate(-90deg);
+          transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+/* line 385, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider-r .hamburger-inner {
+  top: 2px;
+}
+/* line 387, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider-r .hamburger-inner::before {
+  top: 10px;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+/* line 392, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider-r .hamburger-inner::after {
+  top: 20px;
+}
+/* line 394, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider-r.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 10px, 0) rotate(-45deg);
+          transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+/* line 396, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider-r.is-active .hamburger-inner::before {
+  -webkit-transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+          transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+  opacity: 0;
+}
+/* line 399, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--slider-r.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -20px, 0) rotate(90deg);
+          transform: translate3d(0, -20px, 0) rotate(90deg);
+}
+
+/* line 406, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring .hamburger-inner {
+  top: 2px;
+  -webkit-transition: background-color 0s 0.15s linear;
+  transition: background-color 0s 0.15s linear;
+}
+/* line 409, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring .hamburger-inner::before {
+  top: 10px;
+  -webkit-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 412, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring .hamburger-inner::after {
+  top: 20px;
+  -webkit-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 415, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring.is-active .hamburger-inner {
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  background-color: transparent;
+}
+/* line 418, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transform: translate3d(0, 10px, 0) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+/* line 422, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring.is-active .hamburger-inner::after {
+  top: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transform: translate3d(0, 10px, 0) rotate(-45deg);
+          transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+
+/* line 431, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring-r .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 437, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring-r .hamburger-inner::after {
+  top: -20px;
+  -webkit-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear;
+  transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear;
+}
+/* line 440, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring-r .hamburger-inner::before {
+  -webkit-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 442, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring-r.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 446, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring-r.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.32s linear;
+  transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.32s linear;
+}
+/* line 450, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spring-r.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 459, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.1s linear;
+  transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 461, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 463, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 465, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand.is-active .hamburger-inner {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: transparent;
+  -webkit-transition: background-color 0s 0.22s linear, -webkit-transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: background-color 0s 0.22s linear, -webkit-transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.22s linear;
+  transition: transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.22s linear, -webkit-transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 469, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: top 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 473, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: bottom 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 482, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand-r .hamburger-inner {
+  -webkit-transition: background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.1s linear;
+  transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.1s linear, -webkit-transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 484, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand-r .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 486, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand-r .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.1s ease-in, -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.1s ease-in, transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 488, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand-r.is-active .hamburger-inner {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background-color: transparent;
+  -webkit-transition: background-color 0s 0.22s linear, -webkit-transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: background-color 0s 0.22s linear, -webkit-transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.22s linear;
+  transition: transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.22s linear, -webkit-transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 492, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand-r.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: top 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 496, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--stand-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: bottom 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s 0.12s ease-out, -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s 0.12s ease-out, transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 505, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin .hamburger-inner {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 508, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+}
+/* line 510, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 512, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 516, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+}
+/* line 520, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 529, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin-r .hamburger-inner {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 532, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin-r .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+}
+/* line 534, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin-r .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 536, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin-r.is-active .hamburger-inner {
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 540, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin-r.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+}
+/* line 544, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--spin-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 553, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--squeeze .hamburger-inner {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 556, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--squeeze .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.14s ease, opacity 0.1s ease;
+  transition: top 0.1s 0.14s ease, opacity 0.1s ease;
+}
+/* line 558, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--squeeze .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.14s ease, -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.14s ease, -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 560, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--squeeze.is-active .hamburger-inner {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 564, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease, opacity 0.1s 0.14s ease;
+  transition: top 0.1s ease, opacity 0.1s 0.14s ease;
+}
+/* line 568, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease, -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease, -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 577, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex .hamburger-inner {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* line 580, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex .hamburger-inner::before, .hamburger--vortex .hamburger-inner::after {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+/* line 584, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex .hamburger-inner::before {
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+}
+/* line 586, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex .hamburger-inner::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+  transition-property: bottom, transform, -webkit-transform;
+}
+/* line 588, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex.is-active .hamburger-inner {
+  -webkit-transform: rotate(765deg);
+      -ms-transform: rotate(765deg);
+          transform: rotate(765deg);
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* line 591, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex.is-active .hamburger-inner::before, .hamburger--vortex.is-active .hamburger-inner::after {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+/* line 593, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+}
+/* line 596, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* line 604, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r .hamburger-inner {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* line 607, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r .hamburger-inner::before, .hamburger--vortex-r .hamburger-inner::after {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+/* line 611, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r .hamburger-inner::before {
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+}
+/* line 613, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r .hamburger-inner::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+  transition-property: bottom, transform, -webkit-transform;
+}
+/* line 615, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r.is-active .hamburger-inner {
+  -webkit-transform: rotate(-765deg);
+      -ms-transform: rotate(-765deg);
+          transform: rotate(-765deg);
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+/* line 618, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+/* line 620, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+}
+/* line 623, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_hamburger.sass */
+.hamburger--vortex-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+/* line 3, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+#small-dialog {
+  background: white;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 600px;
+  margin: 40px auto;
+  position: relative;
+}
+
+/* line 14, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+/* line 21, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+}
+/* line 24, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* line 27, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* line 29, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* line 36, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+          transform: translateY(-20px) perspective(600px) rotateX(10deg);
+}
+/* line 40, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+          transform: translateY(0) perspective(600px) rotateX(0);
+}
+/* line 43, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+          transform: translateY(-10px) perspective(600px) rotateX(10deg);
+}
+/* line 46, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-slide-bottom.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* line 49, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* line 51, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/elements/_modals.sass */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* line 5, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header {
+  background: white;
+  padding: 20px 0 15px 0;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.15);
+}
+/* line 9, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__logo {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+/* line 14, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__menu {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: auto;
+  color: #8acabc;
+  font-size: 20px;
+}
+/* line 19, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 23, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+/* line 26, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__menu li:last-child {
+  margin-left: 50px;
+}
+/* line 29, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__menu li.active a, .header__menu li:hover a {
+  border-color: #595353;
+}
+/* line 31, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.header__menu li a {
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 41, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  background: #3a3a3a;
+  padding: 50px 0;
+}
+/* line 45, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__heading {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background: #656565;
+  border: 1px solid #2f2f2f;
+  -webkit-box-shadow: 0 2px 0 #2f2f2f;
+          box-shadow: 0 2px 0 #2f2f2f;
+  text-transform: uppercase;
+}
+/* line 54, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__heading--centrify {
+  text-align: center;
+}
+/* line 56, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__links {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+/* line 59, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__links a {
+  display: block;
+  position: relative;
+  color: #8e8e8e;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-indent: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 67, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__links a:hover {
+  color: white;
+}
+/* line 69, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__links a::before {
+  display: inline-block;
+  content: " ";
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%0A%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20width%3D%225px%22%20height%3D%226px%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20%20fill%3D%22rgb%28101%2C%20101%2C%20101%29%22%0A%20d%3D%22M4.380%2C2.790%20L0.510%2C5.024%20L0.510%2C0.556%20L4.380%2C2.790%20Z%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+/* line 79, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__contacts {
+  margin-top: 20px;
+  text-align: center;
+  color: #8e8e8e;
+}
+/* line 83, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__contacts__phone {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+/* line 87, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__contacts__email {
+  font-size: 12px;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+/* line 91, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.footer__contacts__adress {
+  line-height: 1.8em;
+  font-size: 12px;
+}
+
+/* line 97, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.banner {
+  background: #5ab7ac;
+  border-top: 4px solid #4d9c92;
+  padding: 35px 0;
+  color: white;
+}
+/* line 102, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.banner__text {
+  font-size: 20px;
+}
+/* line 104, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.banner__text span {
+  font-weight: 700;
+}
+
+/* line 109, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.alert {
+  background: #5ab7ac;
+  color: white;
+  padding: 15px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* line 119, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.white-bg {
+  background: white;
+}
+
+/* line 122, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.heading {
+  font-size: 42px;
+  color: #5ab7ac;
+}
+/* line 125, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.heading--red {
+  color: #fe7c7c;
+}
+
+/* line 128, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.flex-row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 137, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+/* line 140, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-group > label {
+  font-size: 16px;
+}
+/* line 142, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-group input {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #ebebeb;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  border-left: 6px solid #57dcd4;
+  padding: 20px;
+  font-size: 25px;
+}
+/* line 153, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-group input:focus {
+  outline: none;
+}
+/* line 155, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-group::after {
+  display: block;
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: #57dcd4;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 166, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-group.focus::after {
+  right: 0;
+}
+
+/* line 171, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-checkbox {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 174, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-checkbox input[type='checkbox'] {
+  display: none;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 184, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-checkbox input[type='checkbox']:checked + label::before {
+  background: #dadada url('data:image/svg+xml;charset=utf-8,%3Csvg%0A%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%20width%3D%2215px%22%20height%3D%2215px%22%3E%0A%3Ctext%20font-family%3D%22QuicksandBold%22%20fill%3D%22rgb%28153%2C%20153%2C%20153%29%22%20transform%3D%22matrix%28%200.39922246093605%2C%200%2C%200%2C%200.34644048394112%2C1.73602610900537%2C%2014.2554162166098%29%22%20font-size%3D%2256.284px%22%3EX%3C%2Ftext%3E%0A%3C%2Fsvg%3E%0A') no-repeat center;
+}
+/* line 187, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-checkbox label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 40px;
+  vertical-align: top;
+  line-height: 1.3;
+  font-size: 22px;
+  color: #dadada;
+  cursor: pointer;
+}
+/* line 197, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+.ui-checkbox label::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  content: " ";
+  width: 25px;
+  height: 25px;
+  border-radius: 0px;
+  background: #ebebeb;
+  cursor: pointer;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 217, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+#error_explanation {
+  border-bottom: 2px solid #5ab7ac;
+  color: #999999;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+/* line 222, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+#error_explanation h2 {
+  font-size: 25px;
+}
+/* line 224, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+#error_explanation ul {
+  font-size: 20px;
+  list-style: circle;
+}
+/* line 227, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_common.sass */
+#error_explanation ul li {
+  display: block;
+}
+
+/* line 2, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero {
+  background-image: url(/assets/mainpageHero-8e7ce8efdd0487313040e25962df2afef9cfb432c65433d65349584b47f1a274.png);
+  background-position: left center;
+  background-size: cover;
+  min-height: 520px;
+}
+/* line 7, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 520px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 12, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero__search {
+  margin-left: auto;
+}
+/* line 14, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero__search__group {
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+/* line 18, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero__search__group input {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  font-size: 36px;
+  padding: 20px;
+  background: #cec8c2;
+  border-radius: 5px;
+}
+/* line 26, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero__search__group button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  top: 50%;
+  width: 80px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/* line 43, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.hero__search__group button:focus {
+  outline: none;
+}
+
+/* line 48, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories {
+  padding: 100px 0;
+}
+/* line 50, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 56, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card {
+  min-width: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 18.5%;
+      -ms-flex: 0 1 18.5%;
+          flex: 0 1 18.5%;
+  margin-left: 0.7%;
+  margin-right: 0.7%;
+  margin-bottom: 20px;
+  background: #8acabc;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 68, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card:hover {
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+/* line 70, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card--color2 {
+  background: #5ab7ac;
+}
+/* line 72, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card--color3 {
+  background: #11b4b3;
+}
+/* line 74, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card--color4 {
+  background: #205964;
+}
+/* line 76, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card .ico {
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
+  min-height: 130px;
+  max-width: 100%;
+}
+/* line 80, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_index.sass */
+.categories__card__name {
+  color: white;
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+/* line 4, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_inner.sass */
+.login__wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: -webkit-calc(100vh-100px);
+  min-height: calc(100vh-100px);
+  margin: 10vh 15%;
+}
+/* line 13, /Users/sergeykhmelevskoy/projects/winsouq/app/assets/stylesheets/modules/_inner.sass */
+.login__form {
+  width: 100%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

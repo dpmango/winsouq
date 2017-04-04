@@ -1,0 +1,25 @@
+- content_for :head do
+  title Sign Up to your WinSouq Account
+
+.login
+  .container
+    .row.white-bg
+      .col.col--auto
+        .login__wrapper
+          .login__form
+            h2.heading.heading--red Sign in
+            
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .ui-group
+                = f.email_field :email, autofocus: true, placeholder: 'email address'
+              .ui-group
+                = f.password_field :password, autocomplete: "off", placeholder: 'password'
+              - if devise_mapping.rememberable?
+                  .flex-row
+                    .ui-checkbox
+                      = f.check_box :remember_me
+                      = f.label :remember_me
+                        
+                    = f.submit "Sign in", class: 'btn btn--primary'
+                    
+            = render "devise/shared/links"
