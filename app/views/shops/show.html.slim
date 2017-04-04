@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @shop.title
+p
+  strong Image:
+  = @shop.image
+p
+  strong Description:
+  = @shop.description
+p
+  strong Location:
+  = @shop.location
+p
+  strong Email:
+  = @shop.email
+p
+  strong Phone:
+  = @shop.phone
+p
+  strong Phone 2:
+  = @shop.phone_2
+p
+  strong Contacts:
+  = @shop.contacts
+
+= link_to 'Edit', edit_shop_path(@shop)
+'  |
+= link_to 'Back', shops_path

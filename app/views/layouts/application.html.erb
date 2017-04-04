@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Winsouq</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <% if content_for?(:head) %>
+      <%= yield :head %>
+    <% else %>
+      <title>Winsouq</title>
+      <meta name="description" content="">
+    <% end %>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +17,23 @@
   </head>
 
   <body>
+    <% if content_for?(:header) %>
+      <%= yield :header %>
+    <% else %>
+      <%= render "shared/header" %>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+
     <%= yield %>
+
+    <% if content_for?(:footer) %>
+      <%= yield :footer %>
+    <% else %>
+      <%= render "shared/footer" %>
+    <% end %>
+
   </body>
 </html>

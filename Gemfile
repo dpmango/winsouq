@@ -38,6 +38,17 @@ gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem 'react-rails'
 gem "autoprefixer-rails"
+gem 'devise'
+
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'friendly_id', '~> 5.1.0'
+
+gem "letter_opener", :group => :development
+
 
 
 group :development, :test do

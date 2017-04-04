@@ -1,0 +1,35 @@
+h1 Listing shops
+
+table
+  thead
+    tr
+      th Title
+      th Image
+      th Description
+      th Location
+      th Email
+      th Phone
+      th Phone 2
+      th Contacts
+      th
+      th
+      th
+
+  tbody
+    - @shops.each do |shop|
+      tr
+        td = shop.title
+        td = shop.image
+        td = shop.description
+        td = shop.location
+        td = shop.email
+        td = shop.phone
+        td = shop.phone_2
+        td = shop.contacts
+        td = link_to 'Show', shop
+        td = link_to 'Edit', edit_shop_path(shop)
+        td = link_to 'Destroy', shop, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Shop', new_shop_path
