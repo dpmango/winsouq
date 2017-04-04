@@ -1,0 +1,16 @@
+// ICONS
+.ico
+  display: inline-block
+  font-style: normal
+  content: ' '
+  background-repeat: no-repeat
+  background-size: contain
+  vertical-align: middle
+  background-position: center
+
+.ico
+  &-logo
+    // +hidpi-image('logo@2x.png')
+    // +inline mixin instead of image-url
+    background-image: image-url("logo.png")
+    +image-size('logo.png')

@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem 'react-rails'
 gem "autoprefixer-rails"
+gem "rails-sass-images"
 gem 'devise'
 
 gem 'elasticsearch-rails'
