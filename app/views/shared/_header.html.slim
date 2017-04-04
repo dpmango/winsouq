@@ -9,14 +9,16 @@ header.header
           .header__menu
             ul
               li
-                a href='#' Home
+                = link_to "Home", root_path
+              li.active
+                a href='#' Shop
               li
                 a href="#" Account
               li
                 a href='#' Contact US
               li
-                a href='#' Sign up
-                
-              
-          .header__login
-          
+                - if user_signed_in?
+                  = link_to "Sign Out", destroy_user_session_path, :method => :delete
+                - else
+                  = link_to "Sign up", new_user_registration_path
+                  

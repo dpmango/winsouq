@@ -19,10 +19,19 @@ html
           = yield :header
         - else
           = render "shared/header"
-        p.notice
-          = notice
-        p.alert
-          = alert
+        - if notice
+          .alert.alert--notice
+            .container
+              .row
+                .col.col--auto
+                  = notice
+        - if alert
+          .alert.alert--alert
+            .container
+              .row
+                .col.col--auto
+                  = alert
+                
         = yield
       - if content_for?(:footer)
         = yield :footer

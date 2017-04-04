@@ -1,0 +1,44 @@
+/! BANNER
+.banner
+  .container
+    .row
+      .col.col--auto.text-center
+        .banner__text The <span>leading online platform</span> for home businesses to advertise themselves and their products.
+
+/! FOOTER
+footer.footer
+  .container
+    .row
+      .col.col--1-4
+        .footer__heading WINSHOP
+        .footer__links
+          a href='#' About us
+          a href='#' Career
+          a href='#' Our works / References
+          a href='#' Contact us
+
+      .col.col--1-4
+        .footer__heading Account
+        .footer__links
+          - if user_signed_in?
+            = link_to "My Account", edit_user_registration_path
+            = link_to "Sign Out", destroy_user_session_path, :method => :delete
+          - else
+            = link_to "Sign Up", new_user_registration_path
+            = link_to "Sign In", new_user_session_path
+            = link_to "Restore password", new_user_password_path
+          
+        
+      .col.col--1-4
+        .footer__heading.footer__heading--centrify CONTACT US
+        .footer__contacts
+          .footer__contacts__phone 
+            a href='tel:' 588 125 4666
+          .footer__contacts__email 
+            a href='mailto:' support@yourdomain.com
+          .footer__contacts__adress 5 Place Road Park <br> New York 24856
+      
+      .col.col--1-4.text-center
+        i.ico.ico-footer-payment
+        
+      

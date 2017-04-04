@@ -1,3 +1,84 @@
 // INDEX PAGE
 .hero
-  opacity: 1
+  background-image: image-url("mainpageHero.png")
+  background-position: left center
+  background-size: cover
+  min-height: 520px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    min-height: 520px
+    justify-content: center
+  &__search
+    margin-left: auto
+    &__group
+      display: inline-block
+      float: right
+      position: relative
+      input
+        -webkit-appearance: none
+        box-shadow: none
+        border: none
+        font-size: 36px
+        padding: 20px
+        background: #cec8c2
+        border-radius: 5px
+      button
+        -webkit-appearance: none
+        background: transparent
+        border: none
+        box-shadow: none
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        justify-content: center
+        align-content: center
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        top: 50%
+        width: 80px
+        transform: translateY(-50%)
+        &:focus
+          outline: none
+
+
+// CATEORIES
+.categories
+  padding: 100px 0
+  &__wrapper
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__card
+    min-width: 0
+    flex: 0 1 18.5%
+    margin-left: 0.7%
+    margin-right: 0.7%
+    margin-bottom: 20px
+    background: $colorPrimary
+    border-radius: 10px
+    box-shadow: 0 1px 8px rgba(black, .4)
+    padding: 10px
+    text-align: center
+    transition: all .3s ease
+    &:hover
+      box-shadow: 0 4px 15px rgba(black, .5)
+    &--color2
+      background: $colorPrimary2
+    &--color3
+      background: $colorPrimary3
+    &--color4
+      background: $colorPrimary4
+    .ico
+      transform: scale(.75)
+      min-height: 130px
+      max-width: 100%
+    &__name
+      color: white
+      margin-top: 15px
+      font-size: 28px
+      font-weight: 300

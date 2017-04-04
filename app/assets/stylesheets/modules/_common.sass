@@ -5,12 +5,110 @@
 .header
   background: white
   padding: 20px 0 15px 0
+  border-bottom: 4px solid rgba(black, .15)
   &__wrapper
     display: flex
     justify-content: space-between
+  &__logo
+    flex: 0 0 auto
+  &__menu
+    flex: 0 0 auto
+    margin-left: auto
+    color: $colorPrimary
+    font-size: 20px
+    ul
+      margin: 0
+      padding: 0
+
+    li
+      display: inline-block
+      margin-right: 10px
+      &:last-child
+        margin-left: 50px
+      &.active, &:hover
+        a
+          border-color: #595353
+      a
+        display: inline-block
+        border: 2px solid transparent
+        border-radius: 5px
+        padding: 15px
+        transition: all .3s ease
 
 
 
 // FOOTER
 .footer
   flex: 0
+  background: #3a3a3a
+  padding: 50px 0
+  &__heading
+    display: block
+    padding: 10px 15px
+    font-size: 16px
+    color: white
+    background: #656565
+    border: 1px solid #2f2f2f
+    box-shadow: 0 2px 0 #2f2f2f
+    text-transform: uppercase
+    &--centrify
+      text-align: center
+  &__links
+    margin-top: 20px
+    padding-left: 20px
+    a
+      display: block
+      position: relative
+      color: #8e8e8e
+      font-size: 12px
+      margin-bottom: 10px
+      text-indent: 13px
+      transition: all .3s ease
+      &:hover
+        color: white
+      &::before
+        display: inline-block
+        content: ' '
+        background: inline('svg/footer-arrow.svg')
+        width: 5px
+        height: 5px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+  &__contacts
+    margin-top: 20px
+    text-align: center
+    color: #8e8e8e
+    &__phone
+      font-size: 16px
+      font-weight: 600
+      margin-bottom: 5px
+    &__email
+      font-size: 12px
+      text-decoration: underline
+      margin-bottom: 5px
+    &__adress
+      line-height: 1.8em
+      font-size: 12px
+
+
+// FOOTER BANNER
+.banner
+  background: $colorPrimary2
+  border-top: 4px solid #4d9c92
+  padding: 35px 0
+  color: white
+  &__text
+    font-size: 20px
+    span
+      font-weight: 700
+
+
+// ALERT
+.alert
+  background: $colorPrimary2
+  color: white
+  padding: 15px 0
+  font-size: 15px
+  text-align: center

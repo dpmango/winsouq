@@ -25,7 +25,7 @@
       padding-right: 0
     margin-left: 0
     margin-right: 0
-  @media($desktop)
+  @include mq($until: desktop)
     &--wrap--desktop
       flex-wrap: wrap
     &--column--desktop
@@ -42,7 +42,7 @@
       justify-content: flex-end
     &--jcfs--desktop
       justify-content: flex-start
-  @media($tablet)
+  @include mq($until: tablet)
     &--wrap--tablet
       flex-wrap: wrap
     &--column--tablet
@@ -59,7 +59,7 @@
       justify-content: flex-end
     &--jcfs--tablet
       justify-content: flex-start
-  @media($mobile)
+  @include mq($until: mobile)
     &--wrap--mobile
       flex-wrap: wrap
     &--column--mobile
@@ -108,7 +108,7 @@
   &--no-shrink
     flex-shrink: 0
 
-  @media($desktop)
+  @include mq($until: desktop)
     &--full--desktop
       flex-basis: 100%
     &--auto--desktop
@@ -116,7 +116,7 @@
     &--grow--desktop
       flex-grow: 1
 
-  @media($tablet)
+  @include mq($until: tablet)
     &--full--tablet
       flex-basis: 100%
     &--auto--tablet
@@ -124,7 +124,7 @@
     &--grow--tablet
       flex-grow: 1
 
-  @media($mobile)
+  @include mq($until: mobile)
     &--full--mobile
       flex-basis: 100%
     &--auto--tablet
@@ -143,25 +143,25 @@
 
 .no-pad-l
   padding-left: 0
-  @media($mobile)
+  @include mq($until: mobile)
     padding-left: 15px
 
 .no-pad-r
   padding-right: 0
-  @media($mobile)
+  @include mq($until: mobile)
     padding-right: 15px
 
 .hidden--desktop
   display: block
-  @media($desktop)
+  @include mq($until: desktop)
     display: none
 
 .visible--desktop
   display: none
-  @media($desktop)
+  @include mq($until: desktop)
     display: block
 
 .visible--mobile
   display: none
-  @media($mobile)
+  @include mq($until: mobile)
     display: block
