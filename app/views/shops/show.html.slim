@@ -36,6 +36,12 @@
                 span 
                   | Contacts: 
                 = @shop.contacts
+              .shop__contact
+                br
+                | Send message to #{@shop.user.name} : 
+                | | #{link_to 'Start chat', new_personal_message_path(receiver_id: @shop.user)}
+
+
 
             .col.col--3-6
               .shop__socials

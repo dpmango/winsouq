@@ -118,6 +118,8 @@ GEM
     elasticsearch-transport (5.0.3)
       faraday
       multi_json
+    emoji (1.0.7)
+      json
     erubis (2.7.0)
     excon (0.55.0)
     execjs (2.7.0)
@@ -174,6 +176,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+    json (2.0.3)
     kaminari (1.0.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.0.1)
@@ -333,6 +336,7 @@ DEPENDENCIES
   dotenv-rails
   elasticsearch-model
   elasticsearch-rails
+  emoji
   fog-aws
   friendly_id (~> 5.1.0)
   geo_ip

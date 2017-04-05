@@ -1,0 +1,16 @@
+.messages
+  .container
+    .row.white-bg
+      .col.col--2-4
+      
+      .col.col--4-6
+        h1
+          | Chatting with #{@conversation.with(current_user).name}
+        #conversation-main
+          #conversation-body
+            = render @conversation.personal_messages
+          = form_for @personal_message do |f|
+            = hidden_field_tag 'conversation_id', @conversation.id
+            = f.label :body
+            = f.text_area :body
+            = f.submit
