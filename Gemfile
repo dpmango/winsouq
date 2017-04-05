@@ -55,6 +55,7 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem "letter_opener", :group => :development
 
+gem 'will_paginate'
 gem 'kaminari'
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
@@ -65,7 +66,9 @@ gem "fog-aws"
 gem 'geocoder'
 gem 'geo_ip'
 
-
+gem "mailboxer"
+gem 'gravatar_image_tag'
+gem 'chosen-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

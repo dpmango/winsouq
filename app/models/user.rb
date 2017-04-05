@@ -6,5 +6,8 @@ class User < ApplicationRecord
          :confirmable, :lockable
 
   has_many :shops
+
+  acts_as_messageable
   
+
 end
