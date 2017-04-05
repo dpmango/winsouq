@@ -45,6 +45,7 @@
         vertical-align: middle
 
 
+
 // Content
 .content
   &__wrapper
@@ -58,3 +59,167 @@
   p
     font-size: 16px
     line-height: 1.6
+
+
+// SHOP
+.shop
+  &__hero
+    position: relative
+    padding: 20px 0
+    text-align: center
+    margin-top: 20px
+    height: 230px
+    background: $colorPrimary2
+    color: white
+    &__title
+      font-size: 50px
+    img
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      width: 100%
+      max-width: 100%
+
+  &__contacts
+    border-bottom: 2px solid $colorPrimary
+    &__title
+      display: inline-block
+      font-size: 32px
+      text-align: center
+      color: white
+      background: $colorPrimary
+      padding: 7px 20px
+      border-bottom-left-radius: 8px
+      border-bottom-right-radius: 8px
+
+  &__contact
+    font-size: 20px
+    color: $colorPrimary
+
+  &__socials
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    margin-left: auto
+    max-width: 240px
+    a
+      flex: 0 0 60px
+      margin-bottom: 5px
+
+  // for create/edit
+  &__products
+    padding-top: 20px
+
+  &__product
+    background: white
+    box-shadow: 0px 0px 9px rgba(black, .2)
+    display: flex
+    padding: 5px
+    margin-bottom: 15px
+    &__image
+      flex: 0 0 auto
+      background: $colorPrimary
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin-right: 10px
+      border-right: 2px solid #edeeef
+      color: white
+      .ico
+        transform: scale(.7)
+      span
+
+  // for showing on results page
+  &__sortby
+    margin: 30px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    &__title
+      color: #33b8a4
+      font-size: 11px
+      letter-spacing: .5px
+      text-transform: uppercase
+    &__filters
+      display: flex
+      margin-left: 10px
+    &__filter
+      background: #33b8a4
+      color: white
+      font-size: 11px
+      font-weight: 700
+      padding: 7px 10px
+      border: 1px solid #2c7d72
+      cursor: pointer
+      &.active
+        background: #2c7d72
+      &:first-child
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+      &:last-child
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+
+
+
+  &__listing
+    background: white
+    box-shadow: 0px 0px 9px rgba(black, .2)
+    display: flex
+    padding: 5px 20px
+    margin-bottom: 25px
+    &__image
+      flex: 0 0 auto
+      padding-right: 20px
+      border-right: 2px solid #edeeef
+      img
+        max-width: 100%
+    &__content
+      flex: 1 1 auto
+      display: flex
+      flex-direction: column
+      margin-left: 20px
+    &__name
+      font-size: 26px
+      font-weight: 700
+    &__location
+      font-size: 18px
+    &__description
+      font-size: 24px
+      margin-top: 10px
+    &__actions
+      text-align: right
+      flex: 1
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: flex-end
+      margin-top: auto
+      margin-bottom: 15px
+      .btn
+        display: inline-block
+        margin-right: 10px
+        align-self: flex-end
+        &:last-child
+          margin-right: 0
+
+
+// Search
+.search
+  background: #33b8a4
+  color: white
+  padding: 15px
+  &__title
+    font-size: 30px
+    font-weight: 700
+    margin-top: 5px
+  &__searchbox
+    display: inline-block
+    input
+      background: white
+      border-radius: 4px
+      padding: 7px 15px
+      font-size: 20px

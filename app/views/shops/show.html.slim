@@ -1,26 +1,59 @@
-p#notice = notice
+- content_for :head do
+  title = @shop.title
 
-p
-  strong Title:
-  = @shop.title
-p
-  strong Image:
-  = @shop.image
-p
-  strong Description:
-  = @shop.description
-p
-  strong Location:
-  = @shop.location
-p
-  strong Email:
-  = @shop.email
-p
-  strong Phone:
-  = @shop.phone
-p
-  strong Phone 2:
-  = @shop.phone_2
-p
-  strong Contacts:
-  = @shop.contacts
+.shop
+  .container
+    .row.white-bg
+      .col.col--auto
+        .shop__hero
+          = image_tag @shop.image.hero
+        .shop__contacts
+          .text-center
+            .shop__contacts__title SHOP DETAILS
+          .row
+            .col.col--3-6
+              .shop__contact
+                span 
+                  | Location: 
+                = @shop.location
+
+              .shop__contact
+                span 
+                  | Email: 
+                = @shop.email
+
+              .shop__contact
+                span 
+                  | Phone: 
+                = @shop.phone
+
+              .shop__contact
+                span 
+                  | Phone2: 
+                = @shop.phone_2  
+
+              .shop__contact
+                span 
+                  | Contacts: 
+                = @shop.contacts
+
+            .col.col--3-6
+              .shop__socials
+                a href='#'
+                  i.ico.ico-social.ico-social-fb
+                a href='#'
+                  i.ico.ico-social.ico-social-tw  
+                a href='#'
+                  i.ico.ico-social.ico-social-rss
+                a href='#'
+                  i.ico.ico-social.ico-social-gplus
+                a href='#'
+                  i.ico.ico-social.ico-social-vimeo
+                a href='#'
+                  i.ico.ico-social.ico-social-pinterest
+                a href='#'
+                  i.ico.ico-social.ico-social-linedin
+                a href='#'
+                  i.ico.ico-social.ico-social-instagram  
+      
+        .shop__products

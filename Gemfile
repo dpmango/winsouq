@@ -55,6 +55,16 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem "letter_opener", :group => :development
 
+gem 'kaminari'
+
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'mini_magick'
+gem 'jquery-fileupload-rails'
+gem "fog-aws"
+
+gem 'geocoder'
+gem 'geo_ip'
+
 
 
 group :development, :test do

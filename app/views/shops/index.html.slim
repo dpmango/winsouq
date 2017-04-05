@@ -1,35 +1,43 @@
-h1 Listing shops
+- content_for :head do
+  title All shops
 
-table
-  thead
-    tr
-      th Title
-      th Image
-      th Description
-      th Location
-      th Email
-      th Phone
-      th Phone 2
-      th Contacts
-      th
-      th
-      th
+.search
+  .container
+    .row.row--jcsb
+      .col.col--3-6
+        .search__title We have found #{@shops.count} results!
+      .col.col--3-6.text-right
+        .search__searchbox
+          form
+            input[type='text' placeholder='search query..']
+.shop
+  .container
+    .row
+      .col.col--auto
+        .shop__sortby
+          .shop__sortby__title Sort by: 
+          .shop__sortby__filters
+            .shop__sortby__filter.active Name
+            .shop__sortby__filter Description
+            .shop__sortby__filter Location
+          
+        - @shops.each do |shop|
+          .shop__listing
+            .shop__listing__image
+              = image_tag shop.image.thumb
+            .shop__listing__content
+              .shop__listing__name = shop.title
+              .shop__listing__location = shop.location
+              .shop__listing__description = shop.description
+              td = shop.email
+              td = shop.phone
+              td = shop.phone_2
+              td = shop.contacts
+              .shop__listing__actions
+                - if current_user.id == shop.user.id
+                  = link_to 'Edit', edit_shop_path(shop), class: 'btn btn--secondary'
+                  = link_to 'Destroy', shop, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn--danger'
+                = link_to 'More details', shop, class: 'btn btn--secondary'
 
-  tbody
-    - @shops.each do |shop|
-      tr
-        td = shop.title
-        td = shop.image
-        td = shop.description
-        td = shop.location
-        td = shop.email
-        td = shop.phone
-        td = shop.phone_2
-        td = shop.contacts
-        td = link_to 'Show', shop
-        td = link_to 'Edit', edit_shop_path(shop)
-        td = link_to 'Destroy', shop, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Shop', new_shop_path
+.text-center
+  = link_to 'New Shop', new_shop_path, class: 'btn btn--secondary'

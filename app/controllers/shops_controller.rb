@@ -1,5 +1,6 @@
 class ShopsController < ApplicationController
   before_action :set_shop, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create]
 
   # GET /shops
   # GET /shops.json
@@ -26,17 +27,23 @@ class ShopsController < ApplicationController
   # POST /shops
   # POST /shops.json
   def create
-    @shop = Shop.new(shop_params)
-
-    respond_to do |format|
-      if @shop.save
-        format.html { redirect_to @shop, notice: 'Shop was successfully created.' }
-        format.json { render :show, status: :created, location: @shop }
-      else
-        format.html { render :new }
-        format.json { render json: @shop.errors, status: :unprocessable_entity }
+    if current_user
+      @shop = current_user.shops.build(shop_params)
+      # @shop = Shop.new(shop_params)
+      respond_to do |format|
+        if @shop.save
+          format.html { redirect_to @shop, notice: 'Shop was successfully created.' }
+          format.json { render :show, status: :created, location: @shop }
+        else
+          format.html { render :new }
+          format.json { render json: @shop.errors, status: :unprocessable_entity }
+        end
       end
+
+    else
+  		redirect_to new_user_session_path
     end
+
   end
 
   # PATCH/PUT /shops/1
@@ -66,11 +73,11 @@ class ShopsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
-      @shop = Shop.find(params[:id])
+      @shop = Shop.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shop_params
-      params.require(:shop).permit(:title, :image, :description, :location, :email, :phone, :phone_2, :contacts)
+      params.require(:shop).permit(:user_id, :title, :image, :description, :location, :email, :phone, :phone_2, :contacts)
     end
 end
