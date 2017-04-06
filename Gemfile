@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.4.1"
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -49,7 +49,7 @@ gem 'seed_dump'
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
 
-gem 'dotenv-rails', :groups => [:development, :test]
+# gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'friendly_id', '~> 5.1.0'
 
