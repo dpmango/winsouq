@@ -265,6 +265,7 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
+    redis (3.3.3)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
     rest-client (1.6.7)
@@ -353,6 +354,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-sass-images
   react-rails
+  redis
   sass-rails (~> 5.0)
   seed_dump
   slim-rails

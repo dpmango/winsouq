@@ -1,0 +1,7 @@
+#notification
+  .close close me
+  p
+    = message.body
+    br/
+    | from #{message.user.name}
+  p= link_to 'Take me there now!', conversation_path(message.conversation)
