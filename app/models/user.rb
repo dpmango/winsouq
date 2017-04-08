@@ -12,6 +12,10 @@ class User < ApplicationRecord
 
   has_many :personal_messages, dependent: :destroy
 
+  has_many :favorites
+  has_many :favorite_products, through: :favorites, source: :favorited, source_type: 'Product'
+  has_many :favorite_shops, through: :favorites, source: :favorited, source_type: 'Shop'
+    
   def name
     email.split('@')[0]
   end

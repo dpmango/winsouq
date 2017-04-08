@@ -82,3 +82,18 @@
       margin-top: 15px
       font-size: 28px
       font-weight: 300
+
+@include mq($until: desktop)
+  .categories
+    &__card
+      flex-basis: 23.6%
+
+@include mq($until: tablet)
+  .categories
+    &__card
+      flex-basis: 48.6%
+
+@include mq($until: mobile)
+  .categories
+    &__card
+      flex-basis: 100%

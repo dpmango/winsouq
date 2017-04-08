@@ -61,5 +61,35 @@
                   i.ico.ico-social.ico-social-linedin
                 a href='#'
                   i.ico.ico-social.ico-social-instagram  
-      
-        .shop__products
+                  
+        .row
+          .col.col--4-6
+            .shop__content
+              .h3-title Featured products
+              .shop__products-list
+                - @shopProducts.each do |product|
+                  .shop__product-box
+                    .shop__product-box__favorite
+                      - unless current_user && current_user.favorite_products.exists?(id: product.id)
+                        = link_to '+ <i class="ico ico-like"></i>'.html_safe, favorite_products_path(product_id: product), method: :post
+                      - else
+                        = link_to '- <i class="ico ico-like"></i>'.html_safe, favorite_product_path(product), method: :delete
+
+                    .shop__product-box__description
+                      = product.description
+                    .shop__product-box__image
+                      = image_tag product.image.thumb
+                    .shop__product-box__info
+                      .shop__product-box__info__name
+                        = product.name
+                      .shop__product-box__info__price
+                        = product.price
+                    
+          // sidebar
+          .col.col--2-6
+            .shop__sidebar
+              .shop__sidebar__favorite
+                - unless current_user && current_user.favorite_shops.exists?(id: @shop.id)
+                  = link_to 'favourite this store'.html_safe, favorite_shops_path(shop_id: @shop.id), method: :post
+                - else
+                  = link_to 'remove from favourites'.html_safe, favorite_shop_path(@shop.id), method: :delete

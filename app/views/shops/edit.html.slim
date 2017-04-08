@@ -1,8 +1,105 @@
-h1 Editing shop
+- content_for :head do
+  title Edit shop on WinSouq Account
 
-== render 'form'
+.shop
+  .container
+    .row.white-bg
+      .col.col--auto
+        = form_for @shop, html: { multipart: true } do |f|
+          .shop__hero
+            i.ico.ico-shop-photo
+            .shop__hero__title Click to edit photo
+          .shop__contacts
+            .text-center
+              .shop__contacts__title SHOP DETAILS
+            .row
+              .col.col--3-6
+                .ui-group.ui-group--quick
+                  = f.text_field :location, placeholder: 'INSERT ADDRESS HERE'
+                  .ui-group-edit 
+                    | (edit)
+                .ui-group.ui-group--quick
+                  = f.text_field :email, placeholder: 'EMAIL'
+                  .ui-group-edit 
+                    | (edit)
+                .ui-group.ui-group--quick
+                  = f.text_field :phone, placeholder: 'Phone number 1'
+                  .ui-group-edit 
+                    | (edit)
+                .ui-group.ui-group--quick
+                  = f.text_field :phone_2, placeholder: 'Phone number 2'  
+                  .ui-group-edit 
+                    | (edit)
+                .ui-group.ui-group--quick
+                  = f.text_field :contacts, placeholder: 'Contacts'
+                  .ui-group-edit 
+                    | (edit)
+              .col.col--3-6
+                .shop__socials
+                  a href='#'
+                    i.ico.ico-social.ico-social-fb
+                  a href='#'
+                    i.ico.ico-social.ico-social-tw  
+                  a href='#'
+                    i.ico.ico-social.ico-social-rss
+                  a href='#'
+                    i.ico.ico-social.ico-social-gplus
+                  a href='#'
+                    i.ico.ico-social.ico-social-vimeo
+                  a href='#'
+                    i.ico.ico-social.ico-social-pinterest
+                  a href='#'
+                    i.ico.ico-social.ico-social-linedin
+                  a href='#'
+                    i.ico.ico-social.ico-social-instagram  
+                  
+          - if @shop.errors.any?
+            #error_explanation
+              h2 = "#{pluralize(@shop.errors.count, "error")} prohibited this shop from being saved:"
+              ul
+                - @shop.errors.full_messages.each do |message|
+                  li = message
+          
+          .row
+            .col.col--4-6
+              .ui-group
+                = f.label :title
+                = f.text_field :title
+              .ui-group
+                = f.label :image
+                = f.file_field :image
+              .ui-group
+                = f.label :description
+                = f.text_field :description
+                
+              .ui-group
+                label Choose category
+                = f.select(:category_id, options_from_collection_for_select(@categories, "id", "name"), {}, { :multiple => false, :size => 10, :class => "ui-multi-select" } )
+                
+              .actions 
+                = f.submit "Save", class: 'btn btn--secondary'
 
-= link_to 'Show', @shop
-'  |
-= link_to 'Back', shops_path
+              .shop__products
+                .shop__product
+                  = f.fields_for :products, Product.new do |product|
+                    = product.file_field :image, :multiple => false
+                    
+                    .shop__product__image
+                      i.ico.ico-shop-photo
+                      span
+                        | Click to edit
+                    .shop__product__content
+                      .shop__product__name 
+                        .ui-group
+                          = product.text_field :name
+                      .shop__product__location 
+                        .ui-group
+                          = product.text_field :price
+                      .shop__product__description
+                        .ui-group
+                          = product.text_field :description
+                          
+                      .shop__product__actions
+                        = product.submit 'Create', class: 'btn btn--secondary'
 
+                  

@@ -3,6 +3,8 @@
 
 // HEADER
 .header
+  position: relative
+  z-index: 10
   background: white
   padding: 20px 0 15px 0
   border-bottom: 4px solid rgba(black, .15)
@@ -12,7 +14,7 @@
   &__logo
     flex: 0 0 auto
   &__menu
-    flex: 0 0 auto
+    flex: 0 1 auto
     margin-left: auto
     color: $colorPrimary
     font-size: 20px
@@ -22,6 +24,7 @@
 
     li
       display: inline-block
+      position: relative
       margin-right: 10px
       &:last-child
         margin-left: 50px
@@ -34,8 +37,86 @@
         border-radius: 5px
         padding: 15px
         transition: all .3s ease
+      &:hover
+        .header__menu__drop
+          opacity: 1
+          pointer-events: all
+          transform: translate3d(0, 0px, 0)
+    &__drop
+      position: absolute
+      right: 0
+      top: 57px
+      z-index: 5
+      pointer-events: none
+      opacity: 0
+      transition: all .2s ease
+      transform: translate3d(0, 50px, 0)
+      background: white
+      border-radius: 6px
+      padding: 10px 0
+      box-shadow: 0 4px 10px rgba(black, .2)
+      hr
+        border: none
+        background: #ccc
+        height: 1px
+        margin: 0
+        padding: 0
+      li
+        display: block
+        margin-right: 0px
+        &:last-child
+          margin-left: 0
+        a
+          display: block
+          border: 0
+          padding: 10px 15px
+          font-size: 18px
+          &:hover
+            border-color: transparent
+            background: #f8f8f8
+
+  .hamburger
+    display: none
+
+@include mq($until: desktop)
+  .header
+    &__menu
+      li
+        &:last-child
+          margin-left: 30px
+
+@include mq($until: tablet)
+  .header
+    padding: 8px 0 5px 0
+    &__menu
+      display: none
+    .hamburger
+      display: block
 
 
+.mobile-nav
+  background: white
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 9
+  transform: translate3d(0,-100%,0)
+  opacity: 0
+  pointer-events: none
+  transition: transform .3s ease
+  &.is-active
+    pointer-events: all
+    opacity: 1
+    transform: translate3d(0,0,0)
+  &__list
+    margin-top: 100px
+    font-size: 20px
+    li
+      display: block
+      a
+        display: inline-block
+        padding: 15px
 
 // FOOTER
 .footer
@@ -141,6 +222,7 @@
   margin-bottom: 25px
   position: relative
   > label
+    display: block
     font-size: 16px
   input
     position: relative
@@ -228,6 +310,10 @@
       cursor: pointer
       transition: all .3s ease-in-out
 
+.ui-multi-select
+  display: inline-block
+  width: 100%
+  font-size: 16px
 
 
 

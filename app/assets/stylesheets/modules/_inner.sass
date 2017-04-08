@@ -63,6 +63,9 @@
 
 // SHOP
 .shop
+  .white-bg
+    margin-bottom: 20px
+
   &__hero
     position: relative
     padding: 20px 0
@@ -71,6 +74,7 @@
     height: 230px
     background: $colorPrimary2
     color: white
+    overflow: hidden
     &__title
       font-size: 50px
     img
@@ -109,9 +113,15 @@
       flex: 0 0 60px
       margin-bottom: 5px
 
+  // wrapper
+  &__content
+    padding-top: 30px
+
   // for create/edit
   &__products
     padding-top: 20px
+    padding-bottom: 50px
+    margin-bottom: 20px
 
   &__product
     background: white
@@ -126,12 +136,41 @@
       flex-direction: column
       justify-content: center
       align-items: center
-      margin-right: 10px
+      padding-right: 15px
       border-right: 2px solid #edeeef
       color: white
       .ico
         transform: scale(.7)
       span
+    &__content
+      flex: 1 1 auto
+      display: flex
+      flex-direction: column
+      padding-left: 15px
+    &__name
+      font-size: 26px
+      font-weight: 700
+    &__location
+      font-size: 18px
+    &__description
+      font-size: 24px
+      margin-top: 10px
+    &__actions
+      text-align: right
+      flex: 1
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: flex-end
+      margin-top: auto
+      margin-bottom: 15px
+      .btn
+        display: inline-block
+        margin-right: 10px
+        align-self: flex-end
+        &:last-child
+          margin-right: 0
+
 
   // for showing on results page
   &__sortby
@@ -207,6 +246,87 @@
         &:last-child
           margin-right: 0
 
+  &__products-list
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 30px
+  &__product-box
+    position: relative
+    overflow: hidden
+    flex: 0 1 30%
+    display: flex
+    flex-direction: column
+    margin-top: 15px
+    border: 1px solid #e8e8e8
+    &__image
+      flex: 1
+      margin-bottom: auto
+      height: 115px
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        flex: 1 1 auto
+    &__info
+      background: #e8e8e8
+      display: flex
+      justify-content: space-between
+      align-items: center
+      position: relative
+      z-index: 5
+      padding: 5px 10px
+      font-size: 13px
+      &__name
+        flex: 1 1 auto
+        color: #818181
+      &__price
+        flex: 0 0 auto
+        margin-left: 20px
+        color: #5ab7ac
+    &:hover
+      .shop__product-box__description
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+    &__description
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 2
+      opacity: 0
+      background: rgba(#5ab7ac, .75)
+      color: white
+      font-size: 12px
+      padding: 10px
+      transform: translate3d(0, 100%, 0)
+      transition: all .3s ease
+    &__favorite
+      position: absolute
+      top: 7px
+      right: 7px
+      z-index: 5
+      opacity: .5
+      transition: all .3s ease
+      &:hover
+        opacity: 1
+
+  &__sidebar
+    padding-top: 30px
+    &__favorite
+      color: #5ab7ac
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+
+.h3-title
+  color: #5ab7ac
+  font-size: 16px
 
 // Search
 .search

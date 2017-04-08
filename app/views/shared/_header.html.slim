@@ -1,4 +1,6 @@
 header.header
+  - if user_signed_in?
+    #current-user
   .container
     .row
       .col.col--auto
@@ -12,16 +14,41 @@ header.header
                 = link_to "Home", root_path
               li
                 = link_to "Shop", shops_path
-              - if user_signed_in?
-                li
-                  = link_to "Account", user_welcome_path(current_user.id)
-                li
-                  #current-user
-                  = link_to "Messages", conversations_path
               li
                 = link_to "Contact us", contact_path
               li
                 - if user_signed_in?
-                  = link_to "Sign Out", destroy_user_session_path, :method => :delete
+                  = link_to "Account", user_welcome_path(current_user.id)
+                  ul.header__menu__drop
+                    li
+                      = link_to "Messages", conversations_path
+                    hr
+                    li
+                      = link_to "Sign Out", destroy_user_session_path, :method => :delete
                 - else
                   = link_to "Sign up", new_user_registration_path
+          
+          button.hamburger.hamburger--squeeze type="button" 
+            span.hamburger-box
+              span.hamburger-inner
+            
+.mobile-nav
+  .container
+    .mobile-nav__list
+      ul
+        li
+          = link_to "Home", root_path
+        li
+          = link_to "Shop", shops_path
+        li
+          = link_to "Contact us", contact_path
+        - if user_signed_in?
+          li
+            = link_to "Account", user_welcome_path(current_user.id)
+          li
+            = link_to "Messages", conversations_path
+          li
+            = link_to "Sign Out", destroy_user_session_path, :method => :delete
+        - else
+          li
+            = link_to "Sign up", new_user_registration_path

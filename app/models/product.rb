@@ -1,7 +1,9 @@
 class Product < ApplicationRecord
   belongs_to :shop
-  belongs_to :category
 
   mount_uploader :image, ProductUploader
+
+  validates :name, presence: true
+  validates :price, presence: true
 
 end

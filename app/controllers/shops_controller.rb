@@ -1,6 +1,7 @@
 class ShopsController < ApplicationController
   before_action :set_shop, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :correct_user, only: [:edit, :destroy]
 
   # GET /shops
   # GET /shops.json
@@ -13,20 +14,26 @@ class ShopsController < ApplicationController
   def show
     # friendly id
     @shop = Shop.friendly.find(params[:id])
+
+    @shopProducts = Product.where(shop_id: @shop.id)
   end
 
   # GET /shops/new
   def new
     @shop = Shop.new
+    @categories = Category.all
   end
 
   # GET /shops/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /shops
   # POST /shops.json
   def create
+    @categories = Category.all
+
     if current_user
       @shop = current_user.shops.build(shop_params)
       # @shop = Shop.new(shop_params)
@@ -78,6 +85,18 @@ class ShopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shop_params
-      params.require(:shop).permit(:user_id, :title, :image, :description, :location, :email, :phone, :phone_2, :contacts)
+      params.require(:shop).permit(
+        :category_id, :user_id, :title, :image, :description, :location, :email, :phone, :phone_2, :contacts,
+        products_attributes: [:shop_id, :image, :name, :price, :description]
+      )
     end
+
+    def correct_user
+      @targetShop = current_user.shops.friendly.find(params[:id])
+      if @targetShop.nil?
+        redirect_back(fallback_location: root_path)
+        flash[:alert] = 'You dont have an acess to this page'
+      end
+    end
+
 end
