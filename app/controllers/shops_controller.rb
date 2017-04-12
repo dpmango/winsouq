@@ -14,6 +14,19 @@ class ShopsController < ApplicationController
       @shops = Shop.search_with_elasticsearch(params[:q]).records
     end
 
+    if params[:filter].present?
+      if params[:filter] == 'name'
+        @shops = @shops.order('title ASC')
+      elsif params[:filter] == 'date'
+        @shops = @shops.order('updated_at DESC')
+      elsif params[:filter] == 'location'
+        define_location
+        @shops = @shops.near([@latitude, @longitude], 8_000_000, order: 'distance')
+      end
+    else
+      @shops = @shops.order('updated_at DESC')
+    end
+
   end
 
   # GET /shops/1
@@ -104,6 +117,25 @@ class ShopsController < ApplicationController
         redirect_back(fallback_location: root_path)
         flash[:alert] = 'You dont have an acess to this page'
       end
+    end
+
+    def define_location
+    	# if have geolocation cookies
+    	if !cookies[:geolocation].nil?
+    		@location = JSON.parse(cookies[:geolocation]).symbolize_keys
+    	else
+    		# or detect by ip
+    		@ip = request.remote_ip
+    		if Rails.env.production?
+    			locale = request.location
+    			@location = {longitude: locale.longitude, latitude: locale.latitude}
+    		else
+    			@location = GeoIp.geolocation("192.206.151.131")
+    		end
+    	end
+    	@latitude = @location[:latitude]
+    	@longitude = @location[:longitude]
+    	cookies[:geolocation] = { value: JSON.generate(@location), expires: Time.now + 3600 * 24 * 7 }
     end
 
 end

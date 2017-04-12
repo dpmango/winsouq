@@ -1,0 +1,47 @@
+
+.search
+  .container
+    .row.row--jcsb
+      .col.col--3-6
+        .search__title We have found #{@shops.count(:all)} results!
+      .col.col--3-6.text-right
+        .search__searchbox
+          form action="/shops" method="get"
+            = text_field_tag :q, params[:q], placeholder: 'search query..'
+
+.shop
+  .container
+    .row
+      .col.col--auto
+        .shop__sortby
+          .shop__sortby__title Sort by: 
+          .shop__sortby__filters
+            .shop__sortby__filter.active[data-filter='date'] Date
+            .shop__sortby__filter[data-filter='name'] Name A-Z
+            .shop__sortby__filter[data-filter='location'] Location
+          
+        - @shops.each do |shop|
+          .shop__listing
+            .shop__listing__image
+              = image_tag shop.image.thumb
+            .shop__listing__content
+              .shop__listing__name = shop.title
+              .shop__listing__location = shop.location
+              .shop__listing__contacts
+                span
+                  = shop.email
+                  |  | 
+                span
+                  = shop.phone
+                  |  | 
+                span
+                  = shop.phone_2
+                  |  | 
+                span
+                  = shop.contacts
+
+              .shop__listing__description = sanitize(shop.description, :tags=>[]).truncate(200, :separator => " ").html_safe
+              .shop__listing__actions
+                - if current_user && current_user.id == shop.user.id
+                  = link_to 'Edit', edit_shop_path(shop), class: 'btn btn--secondary'
+                = link_to 'More details', shop, class: 'btn btn--secondary'

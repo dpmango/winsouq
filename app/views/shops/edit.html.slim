@@ -70,7 +70,7 @@
                 = f.file_field :image
               .ui-group
                 = f.label :description
-                = f.text_field :description
+                = f.text_area :description
                 
               .ui-group
                 label Choose category
@@ -78,6 +78,8 @@
                 
               .actions 
                 = f.submit "Save", class: 'btn btn--secondary'
+                
+                = link_to 'Delete', @shop, data: { confirm: 'Are you sure?' }, method: :delete, class: 'link--danger'
 
               .shop__products
                 .shop__product
