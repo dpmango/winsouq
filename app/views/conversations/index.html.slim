@@ -2,7 +2,12 @@
 .messages
   .container
     .row.white-bg
-      .col.col--2-4
-      
-      .col.col--4-6
-        = render @conversations
+      .col.col--auto
+        .messages__wrapper
+          .messages__head
+            .h1-title Messages
+          .row
+            .messages__chats
+              = render @conversations
+            .messages__content
+              

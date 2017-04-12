@@ -3,6 +3,9 @@ class PersonalMessagesController < ApplicationController
 
   def new
     redirect_to conversation_path(@conversation) and return if @conversation
+
+    @conversations = Conversation.participating(current_user).order('updated_at DESC')
+    
     @personal_message = current_user.personal_messages.build
   end
 

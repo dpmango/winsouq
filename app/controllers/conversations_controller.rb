@@ -11,6 +11,12 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @conversations = Conversation.participating(current_user).order('updated_at DESC')
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    
     @conversation = Conversation.find_by(id: params[:id])
     @personal_message = PersonalMessage.new
   end

@@ -1,7 +1,10 @@
-div
-  | Chatting with #{online_status conversation.with(current_user)}
-  br/
-  em= conversation.personal_messages.last.body.truncate(50)
-  br/
-  = link_to 'View conversation', conversation_path(conversation)
-  hr/
+- if controller_name == 'personal_messages'
+  - @conversations.each do |conversation|
+    = link_to conversation_path(conversation), class: "messages__chats__coverstaion"
+      .messages__chats__coverstaion__name #{online_status conversation.with(current_user)}
+      .messages__chats__coverstaion__content = conversation.personal_messages.last.body.truncate(50).html_safe
+
+- else
+  = link_to conversation_path(conversation), class: "messages__chats__coverstaion"
+    .messages__chats__coverstaion__name #{online_status conversation.with(current_user)}
+    .messages__chats__coverstaion__content = conversation.personal_messages.last.body.truncate(50).html_safe
