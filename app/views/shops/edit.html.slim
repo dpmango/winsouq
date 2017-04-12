@@ -7,6 +7,7 @@
       .col.col--auto
         = form_for @shop, html: { multipart: true } do |f|
           .shop__hero
+            = f.file_field :image
             i.ico.ico-shop-photo
             .shop__hero__title Click to edit photo
           .shop__contacts
@@ -14,7 +15,7 @@
               .shop__contacts__title SHOP DETAILS
             .row
               .col.col--3-6
-                .ui-group.ui-group--quick
+                .ui-group.ui-group--quick.mt20
                   = f.text_field :location, placeholder: 'INSERT ADDRESS HERE'
                   .ui-group-edit 
                     | (edit)
@@ -66,42 +67,66 @@
                 = f.label :title
                 = f.text_field :title
               .ui-group
-                = f.label :image
-                = f.file_field :image
-              .ui-group
                 = f.label :description
                 = f.text_area :description
                 
               .ui-group
                 label Choose category
-                = f.select(:category_id, options_from_collection_for_select(@categories, "id", "name"), {}, { :multiple => false, :size => 10, :class => "ui-multi-select" } )
+                = f.select(:category_id, options_from_collection_for_select(@categories, "id", "name", @shop.category.id), {}, { :multiple => false, :size => 10, :class => "ui-multi-select" } )
                 
               .actions 
                 = f.submit "Save", class: 'btn btn--secondary'
                 
                 = link_to 'Delete', @shop, data: { confirm: 'Are you sure?' }, method: :delete, class: 'link--danger'
+                
+        .row
+          .col.col--4-6
+          
+            .shop__products
 
-              .shop__products
-                .shop__product
-                  = f.fields_for :products, Product.new do |product|
-                    = product.file_field :image, :multiple => false
-                    
+              - @shop.products.each do |product|
+                = form_for product, html: { multipart: true } do |p|
+                  .shop__product
+                    = hidden_field_tag 'shop_id', @shop.id
                     .shop__product__image
+                      = p.file_field :image, :multiple => false
+                      = image_tag product.image.thumb
                       i.ico.ico-shop-photo
                       span
-                        | Click to edit
+                        | Click to add photo
                     .shop__product__content
-                      .shop__product__name 
-                        .ui-group
-                          = product.text_field :name
-                      .shop__product__location 
-                        .ui-group
-                          = product.text_field :price
-                      .shop__product__description
-                        .ui-group
-                          = product.text_field :description
-                          
+                      .ui-group.ui-group--small
+                        = p.text_field :name, placeholder: 'Enter name'
+                      .ui-group.ui-group--small
+                        = p.text_field :price, placeholder: 'Enter price'
+                      .ui-group.ui-group--small
+                        = p.text_field :description, placeholder: 'Enter description'
                       .shop__product__actions
-                        = product.submit 'Create', class: 'btn btn--secondary'
-
-                  
+                        = p.submit 'Update', class: 'btn btn--secondary'
+            
+            
+              .shop__products__new
+                i.ico.ico-new-product
+                .shop__products__new__title Add new Item
+                
+              = form_for Product.new do |product|
+                .shop__product.shop__product--hidden
+                  = hidden_field_tag 'shop_id', @shop.id
+                  .shop__product__image
+                    = product.file_field :image, :multiple => false
+                    i.ico.ico-shop-photo
+                    span
+                      | Click to edit photo
+                  .shop__product__content
+                    .ui-group.ui-group--small
+                      = product.text_field :name, placeholder: 'Enter name'
+                    .ui-group.ui-group--small
+                      = product.text_field :price, placeholder: 'Enter price'
+                    .ui-group.ui-group--small
+                      = product.text_field :description, placeholder: 'Enter description'
+                    .shop__product__actions
+                      = product.submit 'Create', class: 'btn btn--secondary'
+          
+          // sidebar
+          .col.col--2-6
+                

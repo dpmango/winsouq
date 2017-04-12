@@ -16,6 +16,13 @@ $(document).on('turbolinks:load', function() {
     $('.mobile-nav').toggleClass('is-active');
   });
 
+  $('.shop__product.shop__product--hidden').hide();
+  // SHOP ADD PRODUCT
+  $('.shop__products__new').on('click', function(){
+    $(this).fadeOut();
+    $('.shop__product.shop__product--hidden').fadeIn();
+  });
+
   // SHOPS SORTING
   function getQueryVariable(variable) {
   	 var query = window.location.search.substring(1);

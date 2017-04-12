@@ -27,4 +27,4 @@ class Shop < ApplicationRecord
 
 end
 
-Shop.import force: true
+Shop.import

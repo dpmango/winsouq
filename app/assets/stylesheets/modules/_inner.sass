@@ -77,6 +77,15 @@
     overflow: hidden
     &__title
       font-size: 50px
+    input
+      -webkit-appearance: none
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: 0
+      cursor: pointer
     img
       position: absolute
       top: 50%
@@ -88,6 +97,7 @@
   &__contacts
     border-bottom: 2px solid $colorPrimary
     padding-bottom: 20px
+    margin-bottom: 20px
     &__title
       display: inline-block
       font-size: 32px
@@ -122,30 +132,78 @@
     padding-top: 20px
     padding-bottom: 50px
     margin-bottom: 20px
+    &__new
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      margin-top: 25px
+      margin-bottom: 25px
+      .ico
+        flex: 0 0 60px
+      &__title
+        color: $colorPrimary2
+        font-size: 30px
+        font-weight: 700
+        margin-left: 15px
+
+
 
   &__product
     background: white
     box-shadow: 0px 0px 9px rgba(black, .2)
     display: flex
-    padding: 5px
+    align-items: center
+    padding: 5px 15px 5px 5px
     margin-bottom: 15px
     &__image
-      flex: 0 0 auto
+      position: relative
+      width: 110px
+      height: 110px
+      flex: 0 0 100px
+      height: 110px
       background: $colorPrimary
       display: flex
       flex-direction: column
       justify-content: center
       align-items: center
-      padding-right: 15px
-      border-right: 2px solid #edeeef
+      margin-right: 15px
+      margin-left: 10px
       color: white
+      overflow: hidden
+      cursor: pointer
+      input
+        -webkit-appearance: none
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0
+        cursor: pointer
+        z-index: 3
+      img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        z-index: 2
       .ico
-        transform: scale(.7)
+        transform: scale(.4)
+        margin-top: -25px
+        transform: top center
       span
+        display: inline-block
+        margin-top: -28px
+        font-size: 15px
+        font-weight: 700
+        text-align: center
     &__content
+      position: relative
       flex: 1 1 auto
       display: flex
       flex-direction: column
+      border-left: 2px solid #edeeef
       padding-left: 15px
     &__name
       font-size: 26px
@@ -156,6 +214,9 @@
       font-size: 24px
       margin-top: 10px
     &__actions
+      position: absolute
+      bottom: 10px
+      right: 0
       text-align: right
       flex: 1
       display: -webkit-flex
@@ -163,8 +224,9 @@
       display: flex
       justify-content: flex-end
       margin-top: auto
-      margin-bottom: 15px
+      margin-bottom: 5px
       .btn
+        font-size: 12px
         display: inline-block
         margin-right: 10px
         align-self: flex-end
