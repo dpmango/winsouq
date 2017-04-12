@@ -24,8 +24,8 @@ Rails.application.routes.draw do
   resources :personal_messages, only: [:new, :create]
   resources :conversations, only: [:index, :show]
 
-  resources :favorite_products, only: [:create, :destroy]
-  resources :favorite_shops, only: [:create, :destroy]
+  resources :favorite_products, only: [:index, :create, :destroy]
+  resources :favorite_shops, only: [:index, :create, :destroy]
 
   mount ActionCable.server => '/cable'
 

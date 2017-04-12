@@ -1,0 +1,28 @@
+- content_for :head do
+  title My Favorite products
+  
+  
+.shop
+  .container
+    .row.white-bg
+      .col.col--auto
+        .shop__content
+          .h1-title Favorited products
+          .shop__products-list.shop__products-list--full
+            - @shopProducts.each do |product|
+              .shop__product-box.is-link data-link = product.shop.id
+                .shop__product-box__favorite
+                  - unless current_user && current_user.favorite_products.exists?(id: product.id)
+                    = link_to '+ <i class="ico ico-like"></i>'.html_safe, favorite_products_path(product_id: product), method: :post
+                  - else
+                    = link_to '- <i class="ico ico-like"></i>'.html_safe, favorite_product_path(product), method: :delete
+
+                .shop__product-box__description
+                  = product.description
+                .shop__product-box__image
+                  = image_tag product.image.thumb
+                .shop__product-box__info
+                  .shop__product-box__info__name
+                    = product.name
+                  .shop__product-box__info__price
+                    = product.price

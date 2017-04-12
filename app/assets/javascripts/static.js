@@ -70,4 +70,13 @@ $(document).on('turbolinks:load', function() {
     });
   }
 
+  // FAVORITE LINKS
+  $('.shop__product-box').on('click', function(){
+    if ( $(this).data('link') ){
+
+      window.location.href = '/shops/' + $(this).data('link')
+    }
+
+  });
+
 });

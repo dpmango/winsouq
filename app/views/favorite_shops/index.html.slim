@@ -1,0 +1,36 @@
+- content_for :head do
+  title My Favorite shops
+  
+.shop
+  .container
+    .row
+      .col.col--auto
+
+      .shop__content
+        .h1-title Favorited shops
+        
+        - @shops.each do |shop|
+          .shop__listing
+            .shop__listing__image
+              = image_tag shop.image.thumb
+            .shop__listing__content
+              .shop__listing__name = shop.title
+              .shop__listing__location = shop.location
+              .shop__listing__contacts
+                span
+                  = shop.email
+                  |  | 
+                span
+                  = shop.phone
+                  |  | 
+                span
+                  = shop.phone_2
+                  |  | 
+                span
+                  = shop.contacts
+
+              .shop__listing__description = sanitize(shop.description, :tags=>[]).truncate(200, :separator => " ").html_safe
+              .shop__listing__actions
+                - if current_user && current_user.id == shop.user.id
+                  = link_to 'Edit', edit_shop_path(shop), class: 'btn btn--secondary'
+                = link_to 'More details', shop, class: 'btn btn--secondary'
