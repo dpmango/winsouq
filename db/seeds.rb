@@ -4,7 +4,7 @@ User.create!([
   {phone: nil, email: "test@me.com", password: "tester", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, confirmation_token: "t6Anb7Dnt-zVRL-y56G-", confirmed_at: "2017-04-12 15:05:17", confirmation_sent_at: "2017-04-12 15:05:13", unconfirmed_email: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil, type: nil, username: "manager", first_name: nil, last_name: nil, birthday: nil, city: nil}
 ])
 AdminUser.create!([
-  {email: "admin@example.com", encrypted_password: "$2a$11$2sdszeJsXOKEkLl7HbBxjewxoW44h9TsLa8RNN1gp992tHMVshu4m", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2017-04-12 15:11:20", last_sign_in_at: "2017-04-04 22:23:57", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"}
+  {email: "admin@example.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2017-04-12 15:11:20", last_sign_in_at: "2017-04-04 22:23:57", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"}
 ])
 Category.create!([
   {name: "Food", icon: "ico-cat-food", color: ""},
