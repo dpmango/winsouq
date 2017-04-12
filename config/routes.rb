@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
   resources :favorite_products, only: [:index, :create, :destroy]
   resources :favorite_shops, only: [:index, :create, :destroy]
+  resources :views, only: [:index]
 
   mount ActionCable.server => '/cable'
 

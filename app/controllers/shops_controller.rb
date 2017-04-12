@@ -38,6 +38,17 @@ class ShopsController < ApplicationController
     @shop = Shop.friendly.find(params[:id])
 
     @shopProducts = Product.where(shop_id: @shop.id)
+
+    # create View
+    if current_user
+      @view = View.find_or_initialize_by(
+        shop_id: @shop.id,
+        user_id: current_user.id
+      )
+      @view.updated_at = Time.now
+      @view.save
+    end
+
   end
 
   # GET /shops/new

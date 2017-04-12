@@ -5,6 +5,7 @@ class Shop < ApplicationRecord
   include Elasticsearch::Model::Callbacks
 
   has_many :products
+  has_many :views
   belongs_to :user
   belongs_to :category
 
