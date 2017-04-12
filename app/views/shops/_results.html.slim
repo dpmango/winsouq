@@ -45,3 +45,5 @@
                 - if current_user && current_user.id == shop.user.id
                   = link_to 'Edit', edit_shop_path(shop), class: 'btn btn--secondary'
                 = link_to 'More details', shop, class: 'btn btn--secondary'
+        
+        = paginate @shops

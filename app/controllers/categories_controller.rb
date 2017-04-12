@@ -31,6 +31,8 @@ class CategoriesController < ApplicationController
       @shops = @shops.order('updated_at DESC')
     end
 
+    @shops = @shops.page(params[:page]).per(20)
+
 
   end
 
@@ -103,5 +105,5 @@ class CategoriesController < ApplicationController
     	@longitude = @location[:longitude]
     	cookies[:geolocation] = { value: JSON.generate(@location), expires: Time.now + 3600 * 24 * 7 }
     end
-    
+
 end

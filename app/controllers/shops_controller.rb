@@ -27,6 +27,8 @@ class ShopsController < ApplicationController
       @shops = @shops.order('updated_at DESC')
     end
 
+    @shops = @shops.page(params[:page]).per(20)
+
   end
 
   # GET /shops/1
