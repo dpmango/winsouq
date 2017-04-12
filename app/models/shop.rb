@@ -1,4 +1,8 @@
+require 'elasticsearch/model'
+
 class Shop < ApplicationRecord
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   has_many :products
   belongs_to :user
@@ -16,5 +20,10 @@ class Shop < ApplicationRecord
 
   validates :title, presence: true
 
+  def self.search_with_elasticsearch(*args,&block)
+    __elasticsearch__.search(*args, &block)
+  end
 
 end
+
+Shop.import force: true

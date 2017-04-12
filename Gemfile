@@ -48,6 +48,7 @@ gem 'seed_dump'
 
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
+gem 'bonsai-elasticsearch-rails'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 

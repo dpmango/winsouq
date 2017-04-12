@@ -9,7 +9,8 @@
       .col.col--3-6.text-right
         .search__searchbox
           form
-            input[type='text' placeholder='search query..']
+            = text_field_tag :q, params[:q], placeholder: 'search query..'
+
 .shop
   .container
     .row

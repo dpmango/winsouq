@@ -5,12 +5,14 @@
       .col.col--auto
         .hero__wrapper
           .hero__search
-            form
-              .hero__search__group
-                input type='search' placeholder='search ..'
+            .hero__search__group
+              form action="/shops" method="get"
+                = text_field_tag :q, params[:q], placeholder: 'search..'
+
                 button type='submit'
                   i.ico.ico-search
-            
+
+
 
 /! Categories
 .categories

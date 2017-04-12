@@ -8,8 +8,9 @@
         .search__title We have found #{@shops.count} results!
       .col.col--3-6.text-right
         .search__searchbox
-          form
-            input[type='text' placeholder='search query..']
+          form action="/shops" method="get"
+            = text_field_tag :q, params[:q], placeholder: 'search query..'
+
 .shop
   .container
     .row

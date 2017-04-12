@@ -6,7 +6,14 @@ class ShopsController < ApplicationController
   # GET /shops
   # GET /shops.json
   def index
-    @shops = Shop.all
+
+    # search query
+    if params[:q].nil?
+      @shops = Shop.all
+    else
+      @shops = Shop.search_with_elasticsearch(params[:q]).records
+    end
+
   end
 
   # GET /shops/1

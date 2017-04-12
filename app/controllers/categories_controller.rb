@@ -10,7 +10,14 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @shops = Shop.where(category_id: params[:id])
+
+    # search query
+    if params[:q].nil?
+      @shops = Shop.where(category_id: params[:id])
+    else
+      @shops = Shop.search_with_elasticsearch(params[:q]).records.where(category_id: params[:id])
+    end
+
   end
 
   # POST /categories
