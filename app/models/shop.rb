@@ -28,4 +28,4 @@ class Shop < ApplicationRecord
 
 end
 
-Shop.import
+Shop.import force: true
