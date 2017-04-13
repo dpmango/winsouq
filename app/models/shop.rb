@@ -1,6 +1,9 @@
 require 'elasticsearch/model'
 
 class Shop < ApplicationRecord
+  if Rails.env.production?
+    Elasticsearch::Model.client = Elasticsearch::Client.new url: ENV['BONSAI_URL'], log: true
+  end
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
