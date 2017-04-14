@@ -7,14 +7,15 @@
       .col.col--auto
         = form_for @shop, html: { multipart: true } do |f|
           .shop__hero
+            = f.file_field :image
             i.ico.ico-shop-photo
-            .shop__hero__title Click to edit photo
+            .shop__hero__title Click to add photo
           .shop__contacts
             .text-center
               .shop__contacts__title SHOP DETAILS
             .row
               .col.col--3-6
-                .ui-group.ui-group--quick
+                .ui-group.ui-group--quick.mt20
                   = f.text_field :location, placeholder: 'INSERT ADDRESS HERE'
                   .ui-group-edit 
                     | (edit)
@@ -35,53 +36,92 @@
                   .ui-group-edit 
                     | (edit)
               .col.col--3-6
+                .sidebar-title.text-right Social accounts
                 .shop__socials
-                  a href='#'
-                    i.ico.ico-social.ico-social-fb
-                  a href='#'
-                    i.ico.ico-social.ico-social-tw  
-                  a href='#'
-                    i.ico.ico-social.ico-social-rss
-                  a href='#'
-                    i.ico.ico-social.ico-social-gplus
-                  a href='#'
-                    i.ico.ico-social.ico-social-vimeo
-                  a href='#'
-                    i.ico.ico-social.ico-social-pinterest
-                  a href='#'
-                    i.ico.ico-social.ico-social-linedin
-                  a href='#'
-                    i.ico.ico-social.ico-social-instagram  
+                  / = f.fields_for :socials, [Social.new]*3 do |s|
+                  /   = s.text_field :icon
+                  /   = s.text_field :link
+                  - @shop.socials.each do |s|
+                    .shop__social
+                      = link_to s, data: { confirm: 'Remove this social media account?' }, method: :delete
+                        i.ico.ico-remove data-id="#{s.id}"
+                      a href='#{s.link}' target='_blank'
+                        i[class="ico ico-social ico-social-#{s.icon}"]
+                .text-right
+                  a.popup-with-zoom-anim href='#socialModal'
+                    i.ico.ico-new-product
                   
+                  #socialModalPaste
+                  
+                .zoom-anim-dialog.mfp-hide#socialModal
+                  .h1-title.text-center Add social media account
+                  .ui-group.ui-group--select
+                    label Select social media
+                    select
+                      option value='fb' Facebook
+                      option value='tw' Twitter
+                      option value='rss' Rss
+                      option value='gplus' Google Plus
+                      option value='vimeo' Vimeo
+                      option value='pinterest' Pinterest
+                      option value='linedin' Linkedin
+                      option value='instagram' Instagram
+                      / option value='custom' Add another
+                  .ui-group#socialModalImage
+                    label Choose image
+                    input type='file'
+                    
+                  .ui-group#socialModalLink
+                    label Provide a link
+                    input type='text' placeholder='www link..'
+                    .ui-group__validation
+                  a.btn.btn--secondary type='submit' Add to the shop
+                  
+                
           - if @shop.errors.any?
             #error_explanation
               h2 = "#{pluralize(@shop.errors.count, "error")} prohibited this shop from being saved:"
               ul
                 - @shop.errors.full_messages.each do |message|
                   li = message
+          .row
+            .col.col--4-6
+              .ui-group
+                = f.label :title
+                = f.text_field :title
+              .ui-group
+                = f.label :description
+                = f.text_area :description
+                
+              .ui-group
+                label Choose category
+                = f.select(:category_id, options_from_collection_for_select(@categories, "id", "name"), {}, { :multiple => false, :size => 10, :class => "ui-multi-select" } )
+                  
 
-          .ui-group
-            = f.label :title
-            = f.text_field :title
-          .ui-group
-            = f.label :image
-            = f.file_field :image
-          .ui-group
-            = f.label :description
-            = f.text_area :description
+              .actions 
+                = f.submit, class: 'btn btn--secondary'
             
-          .ui-group
-            label Choose category
-            = f.select(:category_id, options_from_collection_for_select(@categories, "id", "name"), {}, { :multiple => false, :size => 10, :class => "ui-multi-select" } )
+            .col.col--2-6
+              .shop__sidebar
+                .sidebar-title Payment options (add)
+                .shop__payments
+                      
+                .text-right
+                  a.popup-with-zoom-anim href='#paymentModal'
+                    i.ico.ico-new-product
+                #paymentModalPaste      
+                  
+                .zoom-anim-dialog.mfp-hide#paymentModal
+                  .h1-title.text-center Add payment method
+                  .ui-group.ui-group--select
+                    label Select payment method
+                    select
+                      option value='paypal' PayPal
+                      option value='visa' Visa
+                      option value='mastercard' Mastercard
+                      option value='maestro' Maestro
+                      option value='wirecard' Wirecard
+                      option value='cash' Cash
 
-
-          .shop__products
-            .shop__product
-              .shop__product__image
-                i.ico.ico-shop-photo
-                span
-                  | Click to edit
-              
-
-          .actions 
-            = f.submit
+                  a.btn.btn--secondary type='submit' Add to the shop
+          

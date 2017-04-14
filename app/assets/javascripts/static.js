@@ -151,7 +151,7 @@ $(document).on('turbolinks:load', function() {
 
     var icon = $('#paymentModal select').val();
     // paste to the form
-    $('#paymentModalPaste').append('<input type="text" name="shop[payments_attributes][' + fieldNumP + '][icon]" value="' + icon + '" id="shop_payments_attributes_' + fieldNumP + '_icon">');
+    $('#paymentModalPaste').append('<input type="hidden" name="shop[payments_attributes][' + fieldNumP + '][icon]" value="' + icon + '" id="shop_payments_attributes_' + fieldNumP + '_icon">');
 
     $('.shop__payments').append('<div class="shop__payment removable"><i class="ico ico-remove" data-number='+fieldNumP+'></i><i class="ico ico-payment ico-payment-'+ icon +'"></i></div>');
 
@@ -169,5 +169,34 @@ $(document).on('turbolinks:load', function() {
     $('#shop_payments_attributes_' + numId + '_icon').remove();
   });
 
+
+  // SHOP PRODUCT SORTING
+  var productQ = getQueryVariable('filter');
+
+  $('.shop__sorting__filter').on('click', function(){
+    var filter = $(this).data('filter');
+
+    if(productQ) {
+      // if filter present - replace query
+      loc = location.href.replace("filter=" + productQ, "filter=" + filter);
+    } else{
+      // else just add filter
+      loc += "?filter="+ filter +"";
+    }
+    location.href = loc;
+
+  });
+
+  // SET ACTIVE CLASS
+  if (productQ){
+    $('.shop__sorting__filter').each(function(i, val){
+
+      if ($(val).data('filter') == filterQ){
+        $(val).siblings().removeClass('active');
+        $(val).addClass('active');
+      }
+
+    });
+  }
 
 });

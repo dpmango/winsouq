@@ -7,12 +7,13 @@
       .col.col--auto
         .shop__hero
           = image_tag @shop.image.hero
+          .shop__hero__title.shop__hero__title--client= @shop.title
         .shop__contacts
           .text-center
             .shop__contacts__title SHOP DETAILS
           .row
             .col.col--3-6
-              .shop__contact
+              .shop__contact.mt20
                 span 
                   | Location: 
                 = @shop.location
@@ -38,9 +39,10 @@
                 = @shop.contacts
               .shop__contact
                 br
-                | Send message to #{@shop.user.name} : 
-                | | #{link_to 'Start chat', new_personal_message_path(receiver_id: @shop.user)}
-
+                = link_to "Send message to #{@shop.user.name}", new_personal_message_path(receiver_id: @shop.user), class: 'btn btn--secondary'
+              
+              - if current_user && @shop.user == current_user
+                = link_to "Edit", edit_shop_path(@shop), class: 'btn btn--secondary btn--secondary--edit mt10'
 
 
             .col.col--3-6
@@ -72,6 +74,8 @@
                         = product.name
                       .shop__product-box__info__price
                         = product.price
+                        
+                = paginate @shopProducts
                     
           // sidebar
           .col.col--2-6
@@ -82,7 +86,14 @@
                 - else
                   = link_to 'remove from favourites'.html_safe, favorite_shop_path(@shop.id), method: :delete
               
-              .sidebar-title.text-right Payment options
+              .sidebar-title SoRt products
+              .shop__sorting
+                .shop__sorting__filter.active[data-filter='date'] Sort by <span>Date</span>
+                .shop__sorting__filter[data-filter='name'] Sort by <span>Name</span>
+                .shop__sorting__filter[data-filter='priceA'] Sort by <span>Price ASC</span>
+                .shop__sorting__filter[data-filter='price'] Sort by <span>Price DESC</span>
+                
+              .sidebar-title Payment options
               .shop__payments
                 - @shop.payments.each do |p|
                   .shop__payment

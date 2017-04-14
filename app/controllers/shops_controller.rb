@@ -37,7 +37,23 @@ class ShopsController < ApplicationController
     # friendly id
     @shop = Shop.friendly.find(params[:id])
 
+    # sort products
     @shopProducts = Product.where(shop_id: @shop.id)
+    if params[:filter].present?
+      if params[:filter] == 'name'
+        @shopProducts = @shopProducts.order('name ASC')
+      elsif params[:filter] == 'date'
+        @shopProducts = @shopProducts.order('updated_at DESC')
+      elsif params[:filter] == 'price'
+        @shopProducts = @shopProducts.order('price DESC')
+      elsif params[:filter] == 'priceA'
+        @shopProducts = @shopProducts.order('price ASC')
+      end
+    else
+      @shopProducts = @shopProducts.order('updated_at DESC')
+    end
+
+    @shopProducts = @shopProducts.page(params[:page]).per(15)
 
     # create View
     if current_user
@@ -72,7 +88,38 @@ class ShopsController < ApplicationController
       # @shop = Shop.new(shop_params)
       respond_to do |format|
         if @shop.save
-          format.html { redirect_to @shop, notice: 'Shop was successfully created.' }
+          format.html {
+            # add socials with custom handler
+            if params[:shop][:socials_attributes].present?
+              params[:shop][:socials_attributes].each do |key, value|
+                if value[:link].present?
+                  @social = Social.find_or_initialize_by(
+                    shop_id: @shop.id,
+                    link: value[:link],
+                    icon: value[:icon]
+                  )
+                  @social.link = value[:link]
+                  @social.icon = value[:icon]
+                  @social.save
+                end
+              end
+            end
+            # add payments with custom handler
+            if params[:shop][:payments_attributes].present?
+              params[:shop][:payments_attributes].each do |key, value|
+                if value[:icon].present?
+                  @payment = Payment.find_or_initialize_by(
+                    shop_id: @shop.id,
+                    icon: value[:icon]
+                  )
+                  @payment.icon = value[:icon]
+                  @payment.save
+                end
+              end
+            end
+            
+            redirect_to @shop, notice: 'Shop was successfully created.'
+          }
           format.json { render :show, status: :created, location: @shop }
         else
           format.html { render :new }
@@ -94,6 +141,7 @@ class ShopsController < ApplicationController
     respond_to do |format|
       if @shop.update(shop_params)
         format.html {
+          # add socials with custom handler
           if params[:shop][:socials_attributes].present?
             params[:shop][:socials_attributes].each do |key, value|
               if value[:link].present?

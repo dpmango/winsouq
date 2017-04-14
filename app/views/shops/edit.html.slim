@@ -54,9 +54,6 @@
                   
                   #socialModalPaste
                   
-                  
-                    
-                
                 .zoom-anim-dialog.mfp-hide#socialModal
                   .h1-title.text-center Add social media account
                   .ui-group.ui-group--select
@@ -111,33 +108,33 @@
                 = link_to 'Delete', @shop, data: { confirm: 'Are you sure?' }, method: :delete, class: 'link--danger'
             
             .col.col--2-6
-              .sidebar-title.text-right Payment options (edit)
-              .shop__payments
-                - @shop.payments.each do |p|
-                  .shop__spayment
-                    = link_to s, data: { confirm: 'Remove this social media account?' }, method: :delete
-                      i.ico.ico-remove data-id="#{s.id}"
-                    a href='#{s.link}' target='_blank'
-                      i[class="ico ico-social ico-social-#{s.icon}"]
-                    
-              .text-right
-                a.popup-with-zoom-anim href='#paymentModal'
-                  i.ico.ico-new-product
-              #paymentModalPaste      
-                
-              .zoom-anim-dialog.mfp-hide#paymentModal
-                .h1-title.text-center Add payment method
-                .ui-group.ui-group--select
-                  label Select payment method
-                  select
-                    option value='paypal' PayPal
-                    option value='visa' Visa
-                    option value='mastercard' Mastercard
-                    option value='maestro' Maestro
-                    option value='wirecard' Wirecard
-                    option value='cash' Cash
+              .shop__sidebar
+                .sidebar-title Payment options (edit)
+                .shop__payments
+                  - @shop.payments.each do |p|
+                    .shop__payment
+                      = link_to p, data: { confirm: 'Remove this payment method' }, method: :delete
+                        i.ico.ico-remove data-id="#{p.id}"
+                      i[class="ico ico-payment ico-payment-#{p.icon}"]
+                      
+                .text-right
+                  a.popup-with-zoom-anim href='#paymentModal'
+                    i.ico.ico-new-product
+                #paymentModalPaste      
+                  
+                .zoom-anim-dialog.mfp-hide#paymentModal
+                  .h1-title.text-center Add payment method
+                  .ui-group.ui-group--select
+                    label Select payment method
+                    select
+                      option value='paypal' PayPal
+                      option value='visa' Visa
+                      option value='mastercard' Mastercard
+                      option value='maestro' Maestro
+                      option value='wirecard' Wirecard
+                      option value='cash' Cash
 
-                a.btn.btn--secondary type='submit' Add to the shop
+                  a.btn.btn--secondary type='submit' Add to the shop
           
         .row
           .col.col--4-6
