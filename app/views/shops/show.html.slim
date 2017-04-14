@@ -38,8 +38,9 @@
                   | Contacts: 
                 = @shop.contacts
               .shop__contact
-                br
-                = link_to "Send message to #{@shop.user.name}", new_personal_message_path(receiver_id: @shop.user), class: 'btn btn--secondary'
+                - if @shop.user != current_user
+                  br
+                  = link_to "Send message to #{@shop.user.name}", new_personal_message_path(receiver_id: @shop.user), class: 'btn btn--secondary'
               
               - if current_user && @shop.user == current_user
                 = link_to "Edit", edit_shop_path(@shop), class: 'btn btn--secondary btn--secondary--edit mt10'
