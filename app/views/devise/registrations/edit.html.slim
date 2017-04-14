@@ -16,33 +16,43 @@
               = devise_error_messages!
               .ui-group
                 = f.label :email
-                br/
                 = f.email_field :email, autofocus: true
               - if devise_mapping.confirmable? && resource.pending_reconfirmation?
                 div
                   | Currently waiting confirmation for: #{resource.unconfirmed_email}
               .ui-group
+                label First name
+                = f.text_field :first_name, placeholder: 'Enter your first name'
+              .ui-group
+                label Last name
+                = f.text_field :last_name, placeholder: 'Enter your first name'
+              .ui-group
+                label Date of birth
+                = f.text_field :birthday, placeholder: 'dd.mm.yyy'
+              .ui-group
+                label city
+                = f.text_field :city, placeholder: 'Enter your city'
+              .ui-group
                 = f.label :password
-                | i (leave blank if you don't want to change it)
-                br/
+                .ui-group-info 
+                  | (leave blank if you don't want to change it)
                 = f.password_field :password, autocomplete: "off"
-                - if @minimum_password_length
-                  br/
-                  em
-                    = @minimum_password_length
-                    | characters minimum
+                / - if @minimum_password_length
+                /   .ui-group-info
+                /     = @minimum_password_length
+                /     | characters minimum
+                    
               .ui-group
                 = f.label :password_confirmation
-                br/
                 = f.password_field :password_confirmation, autocomplete: "off"
               .ui-group
                 = f.label :current_password
-                | i (we need your current password to confirm your changes)
-                br/
+                .ui-group-info 
+                  | (we need your current password to confirm your changes)
                 = f.password_field :current_password, autocomplete: "off"
-              .actions
-                = f.submit "Update", class: 'btn btn--primary'
-            h3 Cancel my account
+              .actions.text-right
+                = f.submit "Update information", class: 'btn btn--primary'
+            .h3-title.mt50 Cancel my account
             p
-              | Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+              | #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
             = link_to "Back", :back

@@ -1,6 +1,6 @@
 class ShopsController < ApplicationController
   before_action :set_shop, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
   before_action :correct_user, only: [:edit, :destroy]
 
   # GET /shops
@@ -71,6 +71,11 @@ class ShopsController < ApplicationController
   def new
     @shop = Shop.new
     @categories = Category.all
+
+    if current_user.first_name.blank? || current_user.last_name.blank? || current_user.birthday.blank? || current_user.city.blank?
+      redirect_to edit_user_registration_path(current_user), notice: 'Please provide some details about your identity before creating the shop'
+    end
+
   end
 
   # GET /shops/1/edit
@@ -117,7 +122,7 @@ class ShopsController < ApplicationController
                 end
               end
             end
-            
+
             redirect_to @shop, notice: 'Shop was successfully created.'
           }
           format.json { render :show, status: :created, location: @shop }
