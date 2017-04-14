@@ -45,22 +45,10 @@
 
             .col.col--3-6
               .shop__socials
-                a href='#'
-                  i.ico.ico-social.ico-social-fb
-                a href='#'
-                  i.ico.ico-social.ico-social-tw  
-                a href='#'
-                  i.ico.ico-social.ico-social-rss
-                a href='#'
-                  i.ico.ico-social.ico-social-gplus
-                a href='#'
-                  i.ico.ico-social.ico-social-vimeo
-                a href='#'
-                  i.ico.ico-social.ico-social-pinterest
-                a href='#'
-                  i.ico.ico-social.ico-social-linedin
-                a href='#'
-                  i.ico.ico-social.ico-social-instagram  
+                - @shop.socials.each do |s|
+                  .shop__social
+                    a href='#{s.link}' target='_blank'
+                      i[class="ico ico-social ico-social-#{s.icon}"]
                   
         .row
           .col.col--4-6
@@ -93,3 +81,10 @@
                   = link_to 'favourite this store'.html_safe, favorite_shops_path(shop_id: @shop.id), method: :post
                 - else
                   = link_to 'remove from favourites'.html_safe, favorite_shop_path(@shop.id), method: :delete
+              
+              .sidebar-title.text-right Payment options
+              .shop__payments
+                - @shop.payments.each do |p|
+                  .shop__payment
+                    i[class="ico ico-payment ico-payment-#{p.icon}"]
+                

@@ -93,7 +93,37 @@ class ShopsController < ApplicationController
 
     respond_to do |format|
       if @shop.update(shop_params)
-        format.html { redirect_to @shop, notice: 'Shop was successfully updated.' }
+        format.html {
+          if params[:shop][:socials_attributes].present?
+            params[:shop][:socials_attributes].each do |key, value|
+              if value[:link].present?
+                @social = Social.find_or_initialize_by(
+                  shop_id: @shop.id,
+                  link: value[:link],
+                  icon: value[:icon]
+                )
+                @social.link = value[:link]
+                @social.icon = value[:icon]
+                @social.save
+              end
+            end
+          end
+          # add payments with custom handler
+          if params[:shop][:payments_attributes].present?
+            params[:shop][:payments_attributes].each do |key, value|
+              if value[:icon].present?
+                @payment = Payment.find_or_initialize_by(
+                  shop_id: @shop.id,
+                  icon: value[:icon]
+                )
+                @payment.icon = value[:icon]
+                @payment.save
+              end
+            end
+          end
+
+          redirect_to @shop, notice: 'Shop was successfully updated.'
+        }
         format.json { render :show, status: :ok, location: @shop }
       else
         format.html { render :edit }
@@ -124,6 +154,8 @@ class ShopsController < ApplicationController
         :category_id, :user_id, :title, :image, :description, :location, :email, :phone, :phone_2, :contacts,
         products_attributes: [:shop_id, :image, :name, :price, :description]
       )
+      # socials_attributes: [:shop_id, :image, :link, :icon],
+      # payments_attributes: [:shop_id, :image, :icon]
     end
 
     def correct_user

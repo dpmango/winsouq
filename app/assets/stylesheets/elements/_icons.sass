@@ -65,21 +65,37 @@
     height: 60px
     background-size: auto
     &-fb
-      background-position: 0 3px
+      background-position: 0 2px
     &-tw
-      background-position: -60px 3px
+      background-position: -57px 2px
     &-rss
-      background-position: -120px 3px
+      background-position: -115px 2px
     &-gplus
-      background-position: -180px 3px
+      background-position: -175px 2px
     &-vimeo
-      background-position: 0 -60px
+      background-position: 0 -57px
     &-pinterest
-      background-position: -60px -60px
+      background-position: -57px -57px
     &-linedin
-      background-position: -120px -60px
+      background-position: -115px -57px
     &-instagram
-      background-position: -180px -60px
+      background-position: -175px -57px
+  &-payment
+    width: 70px
+    height: 44px
+    margin-right: 5px
+    &-paypal
+      background-image: image-url("ico-paypal@2x.png")
+    &-visa
+      background-image: image-url("ico-visa@2x.png")
+    &-mastercard
+      background-image: image-url("ico-mastercard@2x.png")
+    &-maestro
+      background-image: image-url("ico-maestro@2x.png")
+    &-wirecard
+      background-image: image-url("ico-wirecard@2x.png")
+    &-cash
+      background-image: image-url("ico-cash@2x.png")
 
   &-like
     background-image: inline('svg/ico-like.svg')
@@ -95,4 +111,15 @@
     background: image-url("ico-chat-btn@2x.png")
     width: 50px
     height: 40px
+    background-size: contain
+
+  &-remove
+    background: image-url("ico-remove@2x.png")
+    width: 20px
+    height: 20px
+    position: absolute
+    top: -6px
+    left: -6px
+    z-index: 2
+    cursor: pointer
     background-size: contain

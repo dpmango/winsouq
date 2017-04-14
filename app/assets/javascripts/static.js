@@ -76,7 +76,98 @@ $(document).on('turbolinks:load', function() {
 
       window.location.href = '/shops/' + $(this).data('link')
     }
+  });
+
+  // Magnific popup
+  $('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+		fixedContentPos: false,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+  $('#socialModalImage').hide();
+
+  function is_valid_url(url) {
+    return /^(http(s)?:\/\/)?(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(url);
+  }
+
+  // LOGIC
+  $('#socialModal select').on('change', function(){
+    // show image uploader if selected custom
+    if ( $(this).val() == 'custom' ){
+      $('#socialModalImage').fadeIn();
+    } else{
+      $('#socialModalImage').fadeOut();
+    }
 
   });
+
+  fieldNum = 0;
+  // click handler
+  $('#socialModal .btn').on('click', function(e){
+    var link = $(this).closest('#socialModal').find('#socialModalLink input');
+    var icon = $('#socialModal select').val();
+
+    if ( !is_valid_url(link.val()) ){
+      console.log('form not valid');
+      link.parent().find('.ui-group__validation').text('URL is not valid')
+      return false;
+    } else{
+      link.parent().find('.ui-group__validation').text('');
+
+      // paste to the form
+      $('#socialModalPaste').append('<input type="hidden" name="shop[socials_attributes][' + fieldNum + '][link]" value="' + link.val() + '" id="shop_socials_attributes_' + fieldNum + '_link">');
+      $('#socialModalPaste').append('<input type="hidden" name="shop[socials_attributes][' + fieldNum + '][icon]" value="' + icon + '" id="shop_socials_attributes_' + fieldNum + '_icon">');
+
+      $('.shop__socials').append('<div class="shop__social removable"><i class="ico ico-remove" data-number='+fieldNum+'></i><a href="'+ link.val() +'"><i class="ico ico-social ico-social-'+ icon +'"></i></a></div>');
+
+      // close modal
+      $.magnificPopup.close();
+      link.val('');
+
+      fieldNum++
+    }
+
+    e.preventDefault();
+  });
+
+  $('.shop__socials').on('click', '.shop__social.removable .ico-remove', function(){
+    var numId = $(this).data('number');
+    $(this).parent().fadeOut().remove();
+    $('#shop_socials_attributes_' + numId + '_link').remove();
+    $('#shop_socials_attributes_' + numId + '_icon').remove();
+  });
+
+  // PAYMENTS
+  fieldNumP = 0;
+  // click handler
+  $('#paymentModal .btn').on('click', function(e){
+
+    var icon = $('#paymentModal select').val();
+    // paste to the form
+    $('#paymentModalPaste').append('<input type="text" name="shop[payments_attributes][' + fieldNumP + '][icon]" value="' + icon + '" id="shop_payments_attributes_' + fieldNumP + '_icon">');
+
+    $('.shop__payments').append('<div class="shop__payment removable"><i class="ico ico-remove" data-number='+fieldNumP+'></i><i class="ico ico-payment ico-payment-'+ icon +'"></i></div>');
+
+    // close modal
+    $.magnificPopup.close();
+
+    fieldNumP++
+
+    e.preventDefault();
+  });
+
+  $('.shop__payments').on('click', '.shop__payment.removable .ico-remove', function(){
+    var numId = $(this).data('number');
+    $(this).parent().fadeOut().remove();
+    $('#shop_payments_attributes_' + numId + '_icon').remove();
+  });
+
 
 });

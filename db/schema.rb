@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412223921) do
+ActiveRecord::Schema.define(version: 20170413190857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,15 @@ ActiveRecord::Schema.define(version: 20170412223921) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "payments", force: :cascade do |t|
+    t.integer  "shop_id"
+    t.string   "icon"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_payments_on_shop_id", using: :btree
+  end
+
   create_table "personal_messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "conversation_id"
@@ -133,6 +142,16 @@ ActiveRecord::Schema.define(version: 20170412223921) do
     t.index ["category_id"], name: "index_shops_on_category_id", using: :btree
     t.index ["slug"], name: "index_shops_on_slug", unique: true, using: :btree
     t.index ["user_id"], name: "index_shops_on_user_id", using: :btree
+  end
+
+  create_table "socials", force: :cascade do |t|
+    t.integer  "shop_id"
+    t.string   "link"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "icon"
+    t.index ["shop_id"], name: "index_socials_on_shop_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -178,11 +197,13 @@ ActiveRecord::Schema.define(version: 20170412223921) do
   end
 
   add_foreign_key "favorites", "users"
+  add_foreign_key "payments", "shops"
   add_foreign_key "personal_messages", "conversations"
   add_foreign_key "personal_messages", "users"
   add_foreign_key "products", "shops"
   add_foreign_key "shops", "categories"
   add_foreign_key "shops", "users"
+  add_foreign_key "socials", "shops"
   add_foreign_key "views", "shops"
   add_foreign_key "views", "users"
 end

@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   resources :favorite_shops, only: [:index, :create, :destroy]
   resources :views, only: [:index]
 
+  resources :socials, only: [:destroy]
+  resources :payments, only: [:destroy]
+
   mount ActionCable.server => '/cable'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
