@@ -13,7 +13,7 @@
           .shop__contacts
             .text-center
               .shop__contacts__title SHOP DETAILS
-            .row
+            .row.row--column--tablet
               .col.col--3-6
                 .ui-group.ui-group--quick.mt20
                   = f.text_field :location, placeholder: 'INSERT ADDRESS HERE'
@@ -84,7 +84,7 @@
               ul
                 - @shop.errors.full_messages.each do |message|
                   li = message
-          .row
+          .row.row--column--tablet
             .col.col--4-6
               .ui-group
                 = f.label :title
@@ -103,25 +103,25 @@
             
             .col.col--2-6
               .shop__sidebar
-                .sidebar-title Payment options (add)
-                .shop__payments
-                      
-                .text-right
-                  a.popup-with-zoom-anim href='#paymentModal'
-                    i.ico.ico-new-product
-                #paymentModalPaste      
-                  
-                .zoom-anim-dialog.mfp-hide#paymentModal
-                  .h1-title.text-center Add payment method
-                  .ui-group.ui-group--select
-                    label Select payment method
-                    select
-                      option value='paypal' PayPal
-                      option value='visa' Visa
-                      option value='mastercard' Mastercard
-                      option value='maestro' Maestro
-                      option value='wirecard' Wirecard
-                      option value='cash' Cash
+                / .sidebar-title Payment options (add)
+                / .shop__payments
+                /       
+                / .text-right
+                /   a.popup-with-zoom-anim href='#paymentModal'
+                /     i.ico.ico-new-product
+                / #paymentModalPaste      
+                /   
+                / .zoom-anim-dialog.mfp-hide#paymentModal
+                /   .h1-title.text-center Add payment method
+                /   .ui-group.ui-group--select
+                /     label Select payment method
+                /     select
+                /       option value='paypal' PayPal
+                /       option value='visa' Visa
+                /       option value='mastercard' Mastercard
+                /       option value='maestro' Maestro
+                /       option value='wirecard' Wirecard
+                /       option value='cash' Cash
 
                   a.btn.btn--secondary type='submit' Add to the shop
           

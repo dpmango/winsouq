@@ -199,4 +199,15 @@ $(document).on('turbolinks:load', function() {
     });
   }
 
+  // REGISTRATIONS CONTROLLER
+  $('.validate-agree').parent().on('submit', function(e){
+    if ( $(this).find('#agreed').is(':checked') ){
+      $(this).find('#agreed').parent().parent().removeClass('has-error');
+    } else {
+      $(this).find('#agreed').parent().parent().addClass('has-error');
+      e.preventDefault();
+      return false;
+    }
+
+  });
 });

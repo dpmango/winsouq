@@ -26,6 +26,9 @@
     background-image: inline('svg/ico-search.svg')
     width: 40px
     height: 40px
+    @include mq($until: tablet)
+      width: 30px
+      height: 30px
 
   &-cat-food
     background-image: image-url("ico-cat-food.png")
@@ -58,6 +61,8 @@
   &-shop-photo
     background-image: image-url("ico-shop-photo.png")
     +image-size("ico-shop-photo.png")
+    @include mq($until: mobile)
+      transform: scale(.7)
 
   &-social
     background-image: image-url("socials-sprite.png")
@@ -123,3 +128,16 @@
     z-index: 2
     cursor: pointer
     background-size: contain
+
+  &-verified
+    background-image: inline('svg/verification-no.svg')
+    width: 40px
+    height: 40px
+    position: absolute
+    right: -10px
+    top: 5px
+    z-index: 5
+    opacity: .3
+    &.yes
+      background-image: inline('svg/verification-yes.svg')
+      opacity: 1

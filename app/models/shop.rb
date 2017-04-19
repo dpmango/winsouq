@@ -17,11 +17,11 @@ class Shop < ApplicationRecord
   after_commit on: [:destroy] do
     __elasticsearch__.delete_document
   end
-  
-  has_many :products
-  has_many :views
-  has_many :socials
-  has_many :payments
+
+  has_many :products, dependent: :destroy
+  has_many :views, dependent: :destroy
+  has_many :socials, dependent: :destroy
+  has_many :payments, dependent: :destroy
   belongs_to :user
   belongs_to :category
 
@@ -39,6 +39,7 @@ class Shop < ApplicationRecord
   reverse_geocoded_by :latitude, :longitude
 
   validates :title, presence: true
+  validates :category_id, presence: true
 
   def self.search_with_elasticsearch(*args,&block)
     __elasticsearch__.search(*args, &block)

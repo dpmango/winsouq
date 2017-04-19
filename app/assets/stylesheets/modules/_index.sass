@@ -43,6 +43,32 @@
         &:focus
           outline: none
 
+@include mq($until: tablet)
+  .hero
+    min-height: 300px
+    &__wrapper
+      min-height: 300px
+    &__search
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      &__group
+        display: inline-block
+        float: none
+        text-align: left
+        input
+          font-size: 30px
+          padding: 18px 20px
+        button
+          width: 60px
+
+@include mq($until: mobile)
+  .hero
+    &__search
+      &__group
+        input
+          width: 100%
+
 
 // CATEORIES
 .categories
@@ -90,6 +116,7 @@
 
 @include mq($until: tablet)
   .categories
+    padding: 50px 0
     &__card
       flex-basis: 48.6%
 

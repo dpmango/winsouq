@@ -8,8 +8,8 @@
 /! FOOTER
 footer.footer
   .container
-    .row.row--wrap.row--column--tablet
-      .col.col--1-4
+    .row.row--column--tablet
+      .col.col--2-6
         .footer__heading WINSHOP
         .footer__links
           = link_to "About us", about_path
@@ -17,7 +17,7 @@ footer.footer
           = link_to "FAQ", faq_path
           = link_to "Terms & Conditions", terms_path
 
-      .col.col--1-4
+      .col.col--2-6
         .footer__heading Account
         .footer__links
           - if user_signed_in?
@@ -30,7 +30,7 @@ footer.footer
             = link_to "Restore password", new_user_password_path
           
         
-      .col.col--1-4
+      .col.col--2-6
         .footer__heading.footer__heading--centrify CONTACT US
         .footer__contacts
           .footer__contacts__phone 
@@ -38,8 +38,5 @@ footer.footer
           .footer__contacts__email 
             a href='mailto:' support@yourdomain.com
           .footer__contacts__adress 5 Place Road Park <br> New York 24856
-      
-      .col.col--1-4.text-center
-        i.ico.ico-footer-payment
         
       

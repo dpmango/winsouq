@@ -15,4 +15,8 @@ module ApplicationHelper
                 class: "user-#{user.id} online-status #{'online' if user.online?}"
   end
 
+  def banner(id)
+    @banner = Banner.find(id)
+  end
+
 end

@@ -1,5 +1,5 @@
 toolbar:
-  - styleselect | bold italic | undo redo
+  - undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image
   - image | link
 plugins:
   - image

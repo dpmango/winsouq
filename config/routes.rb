@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get '/users/:id/welcome', to: "users/registrations#welcome", as: :user_welcome
+    get 'users/:id/myshops', to: "users/registrations#myshops", as: :my_shops
   end
 
   # static pages

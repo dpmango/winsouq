@@ -5,13 +5,22 @@
   .container
     .row.white-bg
       .col.col--auto
+        .shop__verification
+          - if @shop.verified
+              i.ico.ico-verified.yes
+                .tooltip.bottom
+                  .tooltip__content Shop verified
+          - else
+              i.ico.ico-verified
+                .tooltip.bottom
+                  .tooltip__content Shop unverified
         .shop__hero
           = image_tag @shop.image.hero
           .shop__hero__title.shop__hero__title--client= @shop.title
         .shop__contacts
           .text-center
             .shop__contacts__title SHOP DETAILS
-          .row
+          .row.row--column--tablet
             .col.col--3-6
               .shop__contact.mt20
                 span 
@@ -53,7 +62,7 @@
                     a href='#{s.link}' target='_blank'
                       i[class="ico ico-social ico-social-#{s.icon}"]
                   
-        .row
+        .row.row--column--tablet
           .col.col--4-6
             .shop__content
               .h3-title Featured products
@@ -87,16 +96,23 @@
                 - else
                   = link_to 'remove from favourites'.html_safe, favorite_shop_path(@shop.id), method: :delete
               
+              .ad-banner
+                - if banner(1).present?
+                  = banner(1).content.html_safe
               .sidebar-title SoRt products
               .shop__sorting
                 .shop__sorting__filter.active[data-filter='date'] Sort by <span>Date</span>
                 .shop__sorting__filter[data-filter='name'] Sort by <span>Name</span>
                 .shop__sorting__filter[data-filter='priceA'] Sort by <span>Price ASC</span>
                 .shop__sorting__filter[data-filter='price'] Sort by <span>Price DESC</span>
-                
-              .sidebar-title Payment options
-              .shop__payments
-                - @shop.payments.each do |p|
-                  .shop__payment
-                    i[class="ico ico-payment ico-payment-#{p.icon}"]
+              
+              .sidebar-title Shop on map
+              script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUOfU8DspyA0ie-D0DSwWN4DdjjgpGenI&callback=initMap" 
+              iframe allowfullscreen="" frameborder="0" height="300" src="https://www.google.com/maps/embed/v1/place?q=#{"#{@shop.latitude}"}, #{"#{@shop.longitude}"}&key=AIzaSyBUOfU8DspyA0ie-D0DSwWN4DdjjgpGenI" style="border:0" width="100%" 
+
+              / .sidebar-title Payment options
+              / .shop__payments
+              /   - @shop.payments.each do |p|
+              /     .shop__payment
+              /       i[class="ico ico-payment ico-payment-#{p.icon}"]
                 

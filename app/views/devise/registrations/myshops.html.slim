@@ -1,28 +1,18 @@
+- content_for :head do
+  title Manage my shops
+  
 
 .search
   .container
-    .row.row--jcsb.row--column--mobile
+    .row.row--jcsb
       .col.col--3-6
-        .search__title We have found #{@shops.count(:all)} results!
-      .col.col--3-6.text-right.text-center--mobile
-        .search__searchbox
-          form action="/shops" method="get"
-            = text_field_tag :q, params[:q], placeholder: 'search query..'
-.container
-  .ad-banner.ad-banner--nomb
-    - if banner(2).present?
-      = banner(2).content.html_safe
-.shop
+        .search__title My shops
+
+.shop.mt30
   .container
     .row
       .col.col--auto
-        .shop__sortby
-          .shop__sortby__title Sort by: 
-          .shop__sortby__filters
-            .shop__sortby__filter.active[data-filter='date'] Date
-            .shop__sortby__filter[data-filter='name'] Name A-Z
-            .shop__sortby__filter[data-filter='location'] Location
-          
+
         - @shops.each do |shop|
           .shop__listing
             .shop__listing__image
@@ -48,5 +38,3 @@
                 - if current_user && current_user.id == shop.user.id
                   = link_to 'Edit', edit_shop_path(shop), class: 'btn btn--secondary btn--secondary--edit'
                 = link_to 'More details', shop, class: 'btn btn--secondary'
-        
-        = paginate @shops

@@ -28,6 +28,11 @@
             = link_to category_path(category.id), class: catClass
               | <i class="ico #{category.icon}"></i>
               .categories__card__name = category.name
+        
+        .ad-banner
+          - if banner(2).present?
+            = banner(2).content.html_safe
+        
 
             
             

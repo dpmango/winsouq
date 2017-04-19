@@ -14,9 +14,9 @@ ActiveAdmin.register_page "Dashboard" do
     #
     columns do
       column do
-        panel "Recent Users" do
+        panel "New Users" do
           ul do
-            User.last(5).map do |user|
+            User.last(10).map do |user|
               li link_to(user.email, admin_user_path(user))
             end
           end
@@ -24,10 +24,25 @@ ActiveAdmin.register_page "Dashboard" do
       end
 
       column do
-        panel "Info" do
-          para "Hello Admin. More widgets to come soon"
+        panel "New Shops" do
+          ul do
+            Shop.last(10).map do |shop|
+              li link_to(shop.title, admin_shop_path(shop.id))
+            end
+          end
         end
       end
+
+      column do
+        panel "Unverified Shops" do
+          ul do
+            Shop.where(verified: false).last(10).map do |shop|
+              li link_to(shop.title, admin_shop_path(shop.id))
+            end
+          end
+        end
+      end
+
     end
 
   end # content

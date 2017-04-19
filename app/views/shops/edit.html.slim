@@ -14,7 +14,7 @@
           .shop__contacts
             .text-center
               .shop__contacts__title SHOP DETAILS
-            .row
+            .row.row--column--tablet
               .col.col--3-6
                 .ui-group.ui-group--quick.mt20
                   = f.text_field :location, placeholder: 'INSERT ADDRESS HERE'
@@ -89,8 +89,17 @@
                 - @shop.errors.full_messages.each do |message|
                   li = message
           
-          .row
+          .row.row--column--tablet
             .col.col--4-6
+              .ui-group.shop__verification-form
+                label Verification details
+                - if @shop.verified
+                  p Shop is verified. Thank you
+                - else
+                  p Please provide prove of ownership and location details via email to
+                  a href='mailto:shops@winsouq.com' shops@winsouq.com
+                  
+                  
               .ui-group
                 = f.label :title
                 = f.text_field :title
@@ -109,34 +118,34 @@
             
             .col.col--2-6
               .shop__sidebar
-                .sidebar-title Payment options (edit)
-                .shop__payments
-                  - @shop.payments.each do |p|
-                    .shop__payment
-                      = link_to p, data: { confirm: 'Remove this payment method' }, method: :delete
-                        i.ico.ico-remove data-id="#{p.id}"
-                      i[class="ico ico-payment ico-payment-#{p.icon}"]
-                      
-                .text-right
-                  a.popup-with-zoom-anim href='#paymentModal'
-                    i.ico.ico-new-product
-                #paymentModalPaste      
-                  
-                .zoom-anim-dialog.mfp-hide#paymentModal
-                  .h1-title.text-center Add payment method
-                  .ui-group.ui-group--select
-                    label Select payment method
-                    select
-                      option value='paypal' PayPal
-                      option value='visa' Visa
-                      option value='mastercard' Mastercard
-                      option value='maestro' Maestro
-                      option value='wirecard' Wirecard
-                      option value='cash' Cash
-
-                  a.btn.btn--secondary type='submit' Add to the shop
-          
-        .row
+                / .sidebar-title Payment options (edit)
+                / .shop__payments
+                /   - @shop.payments.each do |p|
+                /     .shop__payment
+                /       = link_to p, data: { confirm: 'Remove this payment method' }, method: :delete
+                /         i.ico.ico-remove data-id="#{p.id}"
+                /       i[class="ico ico-payment ico-payment-#{p.icon}"]
+                /       
+                / .text-right
+                /   a.popup-with-zoom-anim href='#paymentModal'
+                /     i.ico.ico-new-product
+                / #paymentModalPaste      
+                /   
+                / .zoom-anim-dialog.mfp-hide#paymentModal
+                /   .h1-title.text-center Add payment method
+                /   .ui-group.ui-group--select
+                /     label Select payment method
+                /     select
+                /       option value='paypal' PayPal
+                /       option value='visa' Visa
+                /       option value='mastercard' Mastercard
+                /       option value='maestro' Maestro
+                /       option value='wirecard' Wirecard
+                /       option value='cash' Cash
+                / 
+                /   a.btn.btn--secondary type='submit' Add to the shop
+                / 
+        .row.row--column--tablet
           .col.col--4-6
           
             .shop__products
@@ -159,6 +168,7 @@
                       .ui-group.ui-group--small
                         = p.text_field :description, placeholder: 'Enter description'
                       .shop__product__actions
+                        = link_to 'Delete', product, data: { confirm: 'Are you sure?' }, method: :delete, class: 'link--danger'
                         = p.submit 'Update', class: 'btn btn--secondary'
             
             
@@ -183,6 +193,6 @@
                       = product.text_field :description, placeholder: 'Enter description'
                     .shop__product__actions
                       = product.submit 'Create', class: 'btn btn--secondary'
-          
+              
           // sidebar
           .col.col--2-6

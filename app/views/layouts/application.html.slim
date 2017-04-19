@@ -13,27 +13,26 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    .page
-      .page__content
-        - if content_for?(:header)
-          = yield :header
-        - else
-          = render "shared/header"
-        - if notice
-          .alert.alert--notice
-            .container
-              .row
-                .col.col--auto
-                  = notice
-        - if alert
-          .alert.alert--alert
-            .container
-              .row
-                .col.col--auto
-                  = alert
-                
-        = yield
-      - if content_for?(:footer)
-        = yield :footer
-      - else
-        = render "shared/footer"
+
+    - if content_for?(:header)
+      = yield :header
+    - else
+      = render "shared/header"
+    - if notice
+      .alert.alert--notice
+        .container
+          .row
+            .col.col--auto
+              = notice
+    - if alert
+      .alert.alert--alert
+        .container
+          .row
+            .col.col--auto
+              = alert
+            
+    = yield
+  - if content_for?(:footer)
+    = yield :footer
+  - else
+    = render "shared/footer"

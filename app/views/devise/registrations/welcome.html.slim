@@ -5,14 +5,19 @@
         .profile__wrapper
           h2.heading.heading--border Welcome #{@user.email}
           
-          .row
+          .row.row--column--mobile
             .col.col--3-6
               .profile__links
                 = link_to "Edit profile", edit_user_registration_path(current_user.id)
                 = link_to "New shop", new_shop_path
+                -if !current_user.shops.nil?
+                  = link_to "My shops", my_shops_path
             .col.col--3-6
               .profile__links
-                = link_to "View history", views_path
-                = link_to "View products liked", favorite_products_path
-                = link_to "View shops liked", favorite_shops_path
+                -if !current_user.views.nil?
+                  = link_to "View history", views_path
+                -if !current_user.favorite_products.nil?
+                  = link_to "View products liked", favorite_products_path
+                -if !current_user.favorite_shops.nil?
+                  = link_to "View shops liked", favorite_shops_path
                 

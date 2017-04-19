@@ -34,12 +34,19 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    respond_to do |format|
+      format.html { redirect_to edit_shop_url(@product.shop), notice: 'Product was successfully removed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
 
     def correct_user
-      @targetShop = current_user.shops.find(params[:shop_id])
+
+      @targetShop = Product.joins(:shops).where("(shops.product_id = #{params[:id]}) AND (shops.user_id = #{current_user.id})")
       if @targetShop.nil?
         redirect_back(fallback_location: root_path)
         flash[:alert] = 'You dont have an acess to this page'
