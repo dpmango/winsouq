@@ -408,10 +408,13 @@
     flex-wrap: wrap
     justify-content: flex-start
     margin-bottom: 30px
+    @include mq($until: tablet)
+      justify-content: center
     &--full
       .shop__product-box
         flex: 0 1 23%
         margin-right: 2%
+
 
   &__product-box
     position: relative
@@ -422,6 +425,9 @@
     flex-direction: column
     margin-top: 15px
     border: 1px solid #e8e8e8
+    @include mq($until: tablet)
+      flex: 0 1 200px
+
     &__image
       flex: 1
       margin-bottom: auto
