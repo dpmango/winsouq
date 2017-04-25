@@ -24,7 +24,7 @@
             .shop__sortby__filter[data-filter='location'] Location
           
         - @shops.each do |shop|
-          .shop__listing
+          .shop__listing data-link=url_for(shop)
             .shop__listing__image
               = image_tag shop.image.thumb
             .shop__listing__content

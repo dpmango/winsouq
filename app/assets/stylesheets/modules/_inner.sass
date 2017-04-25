@@ -341,6 +341,10 @@
     display: flex
     padding: 5px 20px
     margin-bottom: 25px
+    cursor: pointer
+    transition: all .3s ease
+    &:hover
+      box-shadow: 0px 3px 14px rgba(black, .4)
     @include mq($until: mobile)
       flex-direction: column
     &__image
@@ -366,6 +370,7 @@
       @include mq($until: mobile)
         margin-left: 0
     &__name
+      color: #2c7d72
       margin-top: 8px
       font-size: 26px
       font-weight: 700
@@ -373,6 +378,7 @@
         font-size: 22px
 
     &__location
+      color: #2c7d72
       font-size: 18px
       @include mq($until: tablet)
         font-size: 16px
@@ -381,6 +387,8 @@
       margin-top: 10px
       @include mq($until: tablet)
         font-size: 18px
+    &__contacts
+      color: #2c7d72
     &__actions
       text-align: right
       flex: 1
@@ -653,21 +661,36 @@
         opacity: .7
   &__content
     flex: 0 1 60%
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-    flex-direction: column
     padding-left: 15px
     padding-right: 15px
     &__item
-      flex: 0 1 80%
+      flex: 0 1 auto
       align-self: flex-start
-      width: 80%
-      background: $colorPrimary2
-      color: white
-      padding: 10px
-      border-radius: 8px
-      margin-bottom: 15px
+      width: 100%
+      display: flex
+      align-items: flex-start
+      &__avatar
+        flex: 0 0 60px
+        position: relative
+        overflow: hidden
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        background: #f2f2f2
+        img
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          max-width: 100%
+      &__body
+        margin-left: 20px
+        flex: 1 1 auto
+        background: $colorPrimary2
+        color: white
+        padding: 10px
+        border-radius: 8px
+        margin-bottom: 15px
       p
         margin: 10px 0 0px 0
       &__data
@@ -676,10 +699,28 @@
         font-style: italic
         opacity: .75
       &--self
-        margin-left: auto
-        background: $colorPrimary4
+        + .messages__content__item--self
+          margin-bottom: 0
+          margin-top: -30px
+          .messages__content__item__avatar
+            opacity: 0
+            height: 20px
+          .messages__content__item__body
+
+      &--alien
+        .messages__content__item__body
+          background: $colorPrimary4
+        + .messages__content__item--alien
+          margin-top: -30px
+          .messages__content__item__avatar
+            opacity: 0
+            height: 20px
+          .messages__content__item__body
 
 
+
+#conversation-body
+  margin-bottom: 50px
 .new_personal_message
   display: flex
   button

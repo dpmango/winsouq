@@ -1,16 +1,18 @@
 // INDEX PAGE
 .hero
-  background-image: image-url("mainpageHero.png")
   background-position: left center
   background-size: cover
-  min-height: 520px
+  min-height: 300px
   &__wrapper
     display: flex
     flex-direction: column
-    min-height: 520px
+    align-items: center
+    min-height: 300px
     justify-content: center
   &__search
+    margin-top: 50px
     margin-left: auto
+    margin-right: auto
     &__group
       display: inline-block
       float: right
@@ -45,9 +47,9 @@
 
 @include mq($until: tablet)
   .hero
-    min-height: 300px
+    min-height: 250px
     &__wrapper
-      min-height: 300px
+      min-height: 250px
     &__search
       margin-left: auto
       margin-right: auto

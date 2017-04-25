@@ -21,6 +21,8 @@ header.header
                   = link_to "Account", user_welcome_path(current_user.id)
                   ul.header__menu__drop
                     li
+                      = link_to "Dashboard", user_welcome_path(current_user.id)
+                    li
                       = link_to "Messages", conversations_path
                     hr
                     li

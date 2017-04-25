@@ -99,17 +99,19 @@
               .ad-banner
                 - if banner(1).present?
                   = banner(1).content.html_safe
-              .sidebar-title SoRt products
+                  
+              .sidebar-title Shop on map
+              - if @shop.location.present?
+                script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUOfU8DspyA0ie-D0DSwWN4DdjjgpGenI&callback=initMap" 
+                iframe allowfullscreen="" frameborder="0" height="300" src="https://www.google.com/maps/embed/v1/place?q=#{"#{@shop.latitude}"}, #{"#{@shop.longitude}"}&key=AIzaSyBUOfU8DspyA0ie-D0DSwWN4DdjjgpGenI" style="border:0" width="100%" 
+
+              .sidebar-title.mt30 SoRt products
               .shop__sorting
                 .shop__sorting__filter.active[data-filter='date'] Sort by <span>Date</span>
                 .shop__sorting__filter[data-filter='name'] Sort by <span>Name</span>
                 .shop__sorting__filter[data-filter='priceA'] Sort by <span>Price ASC</span>
                 .shop__sorting__filter[data-filter='price'] Sort by <span>Price DESC</span>
               
-              .sidebar-title Shop on map
-              script async="" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUOfU8DspyA0ie-D0DSwWN4DdjjgpGenI&callback=initMap" 
-              iframe allowfullscreen="" frameborder="0" height="300" src="https://www.google.com/maps/embed/v1/place?q=#{"#{@shop.latitude}"}, #{"#{@shop.longitude}"}&key=AIzaSyBUOfU8DspyA0ie-D0DSwWN4DdjjgpGenI" style="border:0" width="100%" 
-
               / .sidebar-title Payment options
               / .shop__payments
               /   - @shop.payments.each do |p|

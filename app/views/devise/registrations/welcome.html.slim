@@ -9,15 +9,15 @@
             .col.col--3-6
               .profile__links
                 = link_to "Edit profile", edit_user_registration_path(current_user.id)
-                = link_to "New shop", new_shop_path
+                = link_to "Create shop", new_shop_path
                 -if !current_user.shops.nil?
                   = link_to "My shops", my_shops_path
             .col.col--3-6
               .profile__links
-                -if !current_user.views.nil?
+                -if current_user.views.any?
                   = link_to "View history", views_path
-                -if !current_user.favorite_products.nil?
+                -if current_user.favorite_products.any?
                   = link_to "View products liked", favorite_products_path
-                -if !current_user.favorite_shops.nil?
+                -if current_user.favorite_shops.any?
                   = link_to "View shops liked", favorite_shops_path
                 

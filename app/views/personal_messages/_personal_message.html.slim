@@ -1,20 +1,29 @@
 - if current_user == personal_message.user
   .messages__content__item.messages__content__item--self
-    = emojify personal_message.body.html_safe
-    .messages__content__item__data
-      - if personal_message.created_at < Time.now - 24.hours
-        = personal_message.created_at.strftime("%H:%M %d.%m.%Y")
-      - else
-        = time_ago_in_words(personal_message.created_at) + " ago"
-
-      / = personal_message.user.name
+    .messages__content__item__avatar
+      - if personal_message.user.avatar.present?
+        = image_tag personal_message.user.avatar.thumb
+    .messages__content__item__body
+      = emojify personal_message.body.html_safe
+      .messages__content__item__data
+        - if personal_message.created_at < Time.now - 24.hours
+          = personal_message.created_at.strftime("%H:%M %d.%m.%Y")
+        - else
+          = time_ago_in_words(personal_message.created_at) + " ago"
+        / = personal_message.user.name
+        
 - else
-  .messages__content__item
-    = emojify personal_message.body.html_safe
-    .messages__content__item__data
-      - if personal_message.created_at < Time.now - 24.hours
-        = personal_message.created_at.strftime("%H:%M %d.%m.%Y")
-      - else
-        = time_ago_in_words(personal_message.created_at) + " ago"
+  .messages__content__item.messages__content__item--alien
+    .messages__content__item__avatar
+      - if personal_message.user.avatar.present?
+        = image_tag personal_message.user.avatar.thumb
+    .messages__content__item__body
+      = emojify personal_message.body.html_safe
+      .messages__content__item__data
+        - if personal_message.created_at < Time.now - 24.hours
+          = personal_message.created_at.strftime("%H:%M %d.%m.%Y")
+        - else
+          = time_ago_in_words(personal_message.created_at) + " ago"
 
-      / = personal_message.user.name
+        / = personal_message.user.name
+      

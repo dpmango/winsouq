@@ -208,6 +208,18 @@ $(document).on('turbolinks:load', function() {
       e.preventDefault();
       return false;
     }
+  });
+
+  // PSEUDO LINK
+  $('.shop__listing').on('click', function(){
+    if ( $(this).data('link') ){
+      window.location.href = $(this).data('link');
+    }
+  });
+
+  $('.shop__listing .btn').on('click', function(e){
+    e.stopPropagation();
 
   });
+
 });

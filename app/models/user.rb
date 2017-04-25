@@ -18,6 +18,8 @@ class User < ApplicationRecord
 
   has_many :views, dependent: :destroy
 
+  mount_uploader :avatar, AvatarUploader
+
   def name
     email.split('@')[0]
   end
