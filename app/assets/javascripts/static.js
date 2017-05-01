@@ -10,6 +10,17 @@ $(document).on('turbolinks:load', function() {
     $(this).parent().find('input').focus();
   })
 
+  // MASKED PLUGIN
+  $('.js-mask-phone').mask('+000 00000000');
+  $('.js-mask-date').mask('00.00.0000');
+
+  // textarea autogrow
+  $("textarea").keyup(function(e) {
+    while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+        $(this).height($(this).height()+1);
+    };
+  });
+
   // hamburger
   $('.hamburger').on('click', function(){
     $(this).toggleClass('is-active');

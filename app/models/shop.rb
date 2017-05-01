@@ -40,6 +40,7 @@ class Shop < ApplicationRecord
 
   validates :title, presence: true
   validates :category_id, presence: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
   def self.search_with_elasticsearch(*args,&block)
     __elasticsearch__.search(*args, &block)

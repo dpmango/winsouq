@@ -75,9 +75,9 @@ class ShopsController < ApplicationController
 
     # if have data
     if current_user.first_name.blank? || current_user.last_name.blank? || current_user.birthday.blank? || current_user.city.blank? || current_user.phone.blank?
-      redirect_to edit_user_registration_path(current_user), notice: 'Please provide some details about your identity before creating the shop'
+      redirect_to edit_user_registration_path(current_user), alert: 'Please provide some details about your identity before creating the shop'
     elsif current_user.shops.length >= 2
-      redirect_to user_welcome_path(current_user), notice: 'Sorry, you are limited to creating 2 shops maximum'
+      redirect_to user_welcome_path(current_user), alert: 'Sorry, you are limited to creating 2 shops maximum'
     end
 
 

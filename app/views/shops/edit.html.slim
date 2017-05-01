@@ -25,11 +25,11 @@
                   .ui-group-edit 
                     | (edit)
                 .ui-group.ui-group--quick
-                  = f.text_field :phone, placeholder: 'Phone number 1'
+                  = f.text_field :phone, placeholder: 'Phone number 1', class: 'js-mask-phone'
                   .ui-group-edit 
                     | (edit)
                 .ui-group.ui-group--quick
-                  = f.text_field :phone_2, placeholder: 'Phone number 2'  
+                  = f.text_field :phone_2, placeholder: 'Phone number 2', class: 'js-mask-phone'
                   .ui-group-edit 
                     | (edit)
                 .ui-group.ui-group--quick
@@ -105,7 +105,7 @@
                 = f.text_field :title
               .ui-group
                 = f.label :description
-                = f.text_area :description
+                = f.text_area :description, class: 'tinyMCE'
                 
               .ui-group
                 label Choose category
